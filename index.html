@@ -161,6 +161,200 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Mysql语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/14/Mysql语法/">Mysql语法 </a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/14/Mysql语法/" class="archive-article-date">
+  	<time datetime="2018-08-14T03:34:55.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mysql介绍"><a href="#Mysql介绍" class="headerlink" title="Mysql介绍"></a>Mysql介绍</h1><h2 id="一，sql分类"><a href="#一，sql分类" class="headerlink" title="一，sql分类"></a>一，sql分类</h2><p>1,<strong>DDL</strong>  数据定义语言 ：用来定义数据库对象（database,table);<br>2,<strong>DML</strong>  数据操作语言 ：用来对数据中表的记录进行更新（insert,delete,update);<br>3,<strong>DQL</strong>  数据查询     ：用来查询数据库中的记录( select,from,where);<br>4,<strong>DCL</strong>  数据控制语言 :(grent)</p>
+<h2 id="二，库操作"><a href="#二，库操作" class="headerlink" title="二，库操作"></a>二，库操作</h2><h3 id="2-1启动mysql"><a href="#2-1启动mysql" class="headerlink" title="2.1启动mysql"></a>2.1启动mysql</h3><p><strong>以下代码都是在cmd命令指示符或者在mysql中输入</strong></p>
+<ul>
+<li><p>启动数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输入密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-2创建库"><a href="#2-2创建库" class="headerlink" title="2.2创建库"></a>2.2创建库</h3><ul>
+<li><p>创建库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database +(库名);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建带有编码的库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database  +(库名) character <span class="built_in">set</span> gbk/utf-8;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-3查看数据库"><a href="#2-3查看数据库" class="headerlink" title="2.3查看数据库"></a>2.3查看数据库</h3><ul>
+<li><p>查看所有数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看某个数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create database +(数据库名);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-4删除数据库"><a href="#2-4删除数据库" class="headerlink" title="2.4删除数据库"></a>2.4删除数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database +(库名);</span><br></pre></td></tr></table></figure>
+<h3 id="2-5查看正在使用的数据库"><a href="#2-5查看正在使用的数据库" class="headerlink" title="2.5查看正在使用的数据库"></a>2.5查看正在使用的数据库</h3><ul>
+<li><p>查看正在使用的数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select database();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use +(库名);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="三，表操作"><a href="#三，表操作" class="headerlink" title="三，表操作"></a>三，表操作</h2><h3 id="3-1-创建表"><a href="#3-1-创建表" class="headerlink" title="3.1 创建表"></a>3.1 创建表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table 表名（</span><br><span class="line">        字段名  类型（长度） [约束]，</span><br><span class="line">        字段名  类型（长度） [约束]，</span><br><span class="line">        字段名  类型（长度） [约束]</span><br><span class="line">        ）;</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-查看表"><a href="#3-2-查看表" class="headerlink" title="3.2 查看表"></a>3.2 查看表</h3><p>前提是要在某个数据库中使用次代码</p>
+<ul>
+<li><p>查看所有表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show  tables;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看某一个表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看表结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc 表名</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-3-表的修改"><a href="#3-3-表的修改" class="headerlink" title="3.3 表的修改"></a>3.3 表的修改</h3><ul>
+<li><p>删除表格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table 表名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改表的结构<br>1， 将表格增加一列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add 字段名 类型（长度） [约束];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>2，修改列的类型（长度，约束）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 modify 要修改的字段名 类型（长度） [约束];</span><br></pre></td></tr></table></figure></p>
+<p>3，修改列的列名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 change 旧列名 新列名 类型（长度） [约束];</span><br></pre></td></tr></table></figure></p>
+<p>4,删除表的列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop 列名</span><br></pre></td></tr></table></figure></p>
+<p>5，修改表的字符集<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 character set 编码</span><br></pre></td></tr></table></figure></p>
+<h2 id="四，DML-插入（insert"><a href="#四，DML-插入（insert" class="headerlink" title="四，DML 插入（insert)"></a>四，DML 插入（insert)</h2><h3 id="4-1-插入记录"><a href="#4-1-插入记录" class="headerlink" title="4.1 插入记录"></a>4.1 插入记录</h3><ul>
+<li>部分插入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名（列名1，列名2，列名3...）values(值1，值2，值3...);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>有多少个列名对应多少个值</p>
+<ul>
+<li>全部插入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 values(值1，值2，值3...);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>值对应所有的列名</p>
+<h3 id="4-2-插入时出现乱码"><a href="#4-2-插入时出现乱码" class="headerlink" title="4.2 插入时出现乱码"></a>4.2 插入时出现乱码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set name gbk;</span><br></pre></td></tr></table></figure>
+<h3 id="4-1-修改-update"><a href="#4-1-修改-update" class="headerlink" title="4.1 修改(update)"></a>4.1 修改(update)</h3><ul>
+<li><p>不带条件的修改（全部修改）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段名=&apos;值&apos;，字段名 =&apos;值&apos;...;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>带条件修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段名=&apos;值&apos;，字段名 =&apos;值&apos;... where 条件（例:字段名=&apos;值&apos;）；</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-1删除表记录"><a href="#4-1删除表记录" class="headerlink" title="4.1删除表记录"></a>4.1删除表记录</h3><ul>
+<li><p>不带条件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>带条件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名 where 条件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>delete 与 truncate 的区别<br>delete ：删除的时候是一条条的删除记录 ，可以将数据找回。（不过我从未找回过）<br>truncate : 它是将整个表摧毁然后创建一模一样的表，它删除的数据无法找回。<br>找回的方法<br>start transaction  :开启新事务，可以回滚<br>rollback: 回滚</p>
+<h2 id="五，DQL-查询"><a href="#五，DQL-查询" class="headerlink" title="五，DQL 查询"></a>五，DQL 查询</h2><h3 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h3></li>
+<li><p>查所有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查某一列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 列名，列名  from 表名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查所有使用别名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 as 别名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查列使用列别名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 列名 as 别名 from 表名;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-2-去重复"><a href="#5-2-去重复" class="headerlink" title="5.2 去重复"></a>5.2 去重复</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct 列名 from 表名;</span><br></pre></td></tr></table></figure>
+<h3 id="5-3将列名-10进行显示"><a href="#5-3将列名-10进行显示" class="headerlink" title="5.3将列名+10进行显示"></a>5.3将列名+10进行显示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 列名，列名+10 from 表名；</span><br></pre></td></tr></table></figure>
+<h3 id="5-4条件查询"><a href="#5-4条件查询" class="headerlink" title="5.4条件查询"></a>5.4条件查询</h3><p>1，查询指定的列名值的信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 where 列名=&apos;值&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>2,查询列名值大于60的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from where 列名&gt;60;</span><br></pre></td></tr></table></figure></p>
+<p>3,查询列名值含有某值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 where 列名 like &apos;%值%&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>4,查询列名值在某一范围如（3，6，9）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 where 列名 in (3,6,9);</span><br></pre></td></tr></table></figure></p>
+<p>5,多条件成立时<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 where 列名.. and(or) 列名..;</span><br></pre></td></tr></table></figure></p>
+<h2 id="六，排序"><a href="#六，排序" class="headerlink" title="六，排序"></a>六，排序</h2><h3 id="6-1-通过列名值升序"><a href="#6-1-通过列名值升序" class="headerlink" title="6.1 通过列名值升序"></a>6.1 通过列名值升序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 order by 列名 asci;</span><br></pre></td></tr></table></figure>
+<h3 id="6-2-通过列名值降序"><a href="#6-2-通过列名值降序" class="headerlink" title="6.2 通过列名值降序"></a>6.2 通过列名值降序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *from 表名 order by 列名 desc;</span><br></pre></td></tr></table></figure>
+<h2 id="七，聚合函数（不统计null值）"><a href="#七，聚合函数（不统计null值）" class="headerlink" title="七，聚合函数（不统计null值）"></a>七，聚合函数（不统计null值）</h2><h3 id="7-1求总合·"><a href="#7-1求总合·" class="headerlink" title="7.1求总合·"></a>7.1求总合·</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum （列名） from 表名;</span><br></pre></td></tr></table></figure>
+<h3 id="7-2求平均"><a href="#7-2求平均" class="headerlink" title="7.2求平均"></a>7.2求平均</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select avg （列名） from 表名;</span><br></pre></td></tr></table></figure>
+<h3 id="7-3求所有个数"><a href="#7-3求所有个数" class="headerlink" title="7.3求所有个数"></a>7.3求所有个数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(列名) from 表名;</span><br></pre></td></tr></table></figure>
+<h2 id="八，分组操作"><a href="#八，分组操作" class="headerlink" title="八，分组操作"></a>八，分组操作</h2><h3 id="8-1-语法"><a href="#8-1-语法" class="headerlink" title="8.1 语法"></a>8.1 语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count *from 表名 group by 列名;</span><br></pre></td></tr></table></figure>
+<h3 id="8-2-根据列名cid分组，分组计平均，并且平均大于20000"><a href="#8-2-根据列名cid分组，分组计平均，并且平均大于20000" class="headerlink" title="8.2 根据列名cid分组，分组计平均，并且平均大于20000"></a>8.2 根据列名cid分组，分组计平均，并且平均大于20000</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select avg（列名）from 表名 group by cid having avg(列名)&gt;20000;</span><br></pre></td></tr></table></figure>
+<p>分组用having 不用where</p>
+<h2 id="九，总结及注意"><a href="#九，总结及注意" class="headerlink" title="九，总结及注意"></a>九，总结及注意</h2><h2 id="语句顺序"><a href="#语句顺序" class="headerlink" title="语句顺序"></a>语句顺序</h2><p>select<br>from<br>where<br>group by<br>having :分组后带条件时只能用having<br>order by 最后</p>
+<h2 id="如果有其他补充下次来更新"><a href="#如果有其他补充下次来更新" class="headerlink" title="如果有其他补充下次来更新"></a>如果有其他补充下次来更新</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/14/Mysql语法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第一章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -450,6 +644,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tag1</a>
