@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第一章 | 梦里北极光的博客</title>
+  <title>Vue.js的学习 | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="写作介绍1，字体介绍这是斜体 或 这也是斜体这是粗体这是加粗斜体这是删除线 2，分级标题一级标题二级标题三级标题四级标题五级标题六级标题3，超链接写法： 行内形式：我的博客参考形式：[我的博客][1]，有一个很好的平台-[简书][2][1]:https://xfbxfbxfb.github.io/[2]:http://www.jianshu.com/自动链接：我的博客地址https://xfbxf">
-<meta name="keywords" content="tag1,tag2,tag3">
+  <meta name="description" content="vue与MVVM一，MVVM 与 MVC解释MVC （Model-View-Controller） M - Model ：数据保存 V - View : 用户界面 C - Controller ： 业务逻辑1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心">
+<meta name="keywords" content="学习,前端,vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一章">
-<meta property="og:url" content="http://yoursite.com/2018/08/13/第一章/index.html">
+<meta property="og:title" content="Vue.js的学习">
+<meta property="og:url" content="http://yoursite.com/2018/08/20/Vue-js的学习/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
-<meta property="og:description" content="写作介绍1，字体介绍这是斜体 或 这也是斜体这是粗体这是加粗斜体这是删除线 2，分级标题一级标题二级标题三级标题四级标题五级标题六级标题3，超链接写法： 行内形式：我的博客参考形式：[我的博客][1]，有一个很好的平台-[简书][2][1]:https://xfbxfbxfb.github.io/[2]:http://www.jianshu.com/自动链接：我的博客地址https://xfbxf">
+<meta property="og:description" content="vue与MVVM一，MVVM 与 MVC解释MVC （Model-View-Controller） M - Model ：数据保存 V - View : 用户界面 C - Controller ： 业务逻辑1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/img/头像.jpg">
-<meta property="og:updated_time" content="2018-08-13T10:39:49.335Z">
+<meta property="og:updated_time" content="2018-08-20T08:10:08.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一章">
-<meta name="twitter:description" content="写作介绍1，字体介绍这是斜体 或 这也是斜体这是粗体这是加粗斜体这是删除线 2，分级标题一级标题二级标题三级标题四级标题五级标题六级标题3，超链接写法： 行内形式：我的博客参考形式：[我的博客][1]，有一个很好的平台-[简书][2][1]:https://xfbxfbxfb.github.io/[2]:http://www.jianshu.com/自动链接：我的博客地址https://xfbxf">
-<meta name="twitter:image" content="http://yoursite.com/img/头像.jpg">
+<meta name="twitter:title" content="Vue.js的学习">
+<meta name="twitter:description" content="vue与MVVM一，MVVM 与 MVC解释MVC （Model-View-Controller） M - Model ：数据保存 V - View : 用户界面 C - Controller ： 业务逻辑1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -161,22 +159,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第一章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="=-Vue-js的学习" class="article article-type-= " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第一章
+      Vue.js的学习
     </h1>
   
 
 
 
         
-        <a href="/2018/08/13/第一章/" class="archive-article-date">
-  	<time datetime="2018-08-13T08:58:53.343Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
+        <a href="/2018/08/20/Vue-js的学习/" class="archive-article-date">
+  	<time datetime="2018-08-20T01:54:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
 </a>
         
         
@@ -189,57 +187,47 @@
     
     
       <!-- 目录内容 -->
-       
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+        <span class="btn-bg"></span>
+        <span class="btn-text">文章导航</span>
+        </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue与MVVM"><span class="toc-number">1.</span> <span class="toc-text">vue与MVVM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，MVVM-与-MVC解释"><span class="toc-number">1.1.</span> <span class="toc-text">一，MVVM 与 MVC解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，vue中v-cloak-v-text-v-html-v-bind"><span class="toc-number">1.2.</span> <span class="toc-text">二，vue中v-cloak,v-text,v-html,v-bind</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-v-cloak"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.v-cloak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-v-text"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.v-text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-v-html"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.v-html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-v-bind"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.v-bind</span></a></li></ol></li></ol></li></ol>
+       </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+          
    <!-- 目录内容结束 -->
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写作介绍"><a href="#写作介绍" class="headerlink" title="写作介绍"></a>写作介绍</h1><h2 id="1，字体介绍"><a href="#1，字体介绍" class="headerlink" title="1，字体介绍"></a>1，字体介绍</h2><p><em>这是斜体</em> 或 <em>这也是斜体</em><br><strong>这是粗体</strong><br><strong><em>这是加粗斜体</em></strong><br><del>这是删除线</del></p>
-<h2 id="2，分级标题"><a href="#2，分级标题" class="headerlink" title="2，分级标题"></a>2，分级标题</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="3，超链接"><a href="#3，超链接" class="headerlink" title="3，超链接"></a>3，超链接</h2><p>写法：</p>
-<p>行内形式：<a href="https://xfbxfbxfb.github.io/" target="_blank" rel="noopener">我的博客</a><br>参考形式：[我的博客][1]，有一个很好的平台-[简书][2]<br>[1]:<a href="https://xfbxfbxfb.github.io/" target="_blank" rel="noopener">https://xfbxfbxfb.github.io/</a><br>[2]:<a href="http://www.jianshu.com/" target="_blank" rel="noopener">http://www.jianshu.com/</a><br>自动链接：我的博客地址<a href="https://xfbxfbxfb.github.io/" target="_blank" rel="noopener">https://xfbxfbxfb.github.io/</a></p>
-<h2 id="4-列表"><a href="#4-列表" class="headerlink" title="4,列表"></a>4,列表</h2><p>无序列表：<br>写法：</p>
-<ul>
-<li>无序列表项1</li>
-</ul>
-<ul>
-<li>无序列表项2</li>
-</ul>
-<ul>
-<li>无序列表项3</li>
-</ul>
-<p>有序列表：<br>写法：<br>1.有序列表项1<br>2.有序列表项2<br>3.有序列表项3</p>
-<h2 id="5，插入图片"><a href="#5，插入图片" class="headerlink" title="5，插入图片"></a>5，插入图片</h2><p>在 Hexo 中插入图片，首先需要将图片放在 source/img/ 文件夹下，然后如下方式进行插入：</p>
-<p><img src="/img/头像.jpg" alt=""></p>
-<h2 id="6，表格"><a href="#6，表格" class="headerlink" title="6，表格"></a>6，表格</h2><table>
-<thead>
-<tr>
-<th>表头1</th>
-<th style="text-align:left">表头2</th>
-<th style="text-align:center">表头3</th>
-<th style="text-align:right">表头4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>默认左对齐</td>
-<td style="text-align:left">左对齐</td>
-<td style="text-align:center">居中对其</td>
-<td style="text-align:right">右对齐</td>
-</tr>
-<tr>
-<td>默认左对齐</td>
-<td style="text-align:left">左对齐</td>
-<td style="text-align:center">居中对其</td>
-<td style="text-align:right">右对齐</td>
-</tr>
-<tr>
-<td>默认左对齐</td>
-<td style="text-align:left">左对齐</td>
-<td style="text-align:center">居中对其</td>
-<td style="text-align:right">右对齐</td>
-</tr>
-</tbody>
-</table>
+        <h1 id="vue与MVVM"><a href="#vue与MVVM" class="headerlink" title="vue与MVVM"></a>vue与MVVM</h1><h2 id="一，MVVM-与-MVC解释"><a href="#一，MVVM-与-MVC解释" class="headerlink" title="一，MVVM 与 MVC解释"></a>一，MVVM 与 MVC解释</h2><p>MVC （Model-View-Controller）</p>
+<p>M - Model ：数据保存</p>
+<p>V - View : 用户界面</p>
+<p>C - Controller ： 业务逻辑<br>1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听。这两个方向都实现的，我们称之为数据的双向绑定。</p>
+<p>MVVM是将“数据模型数据双向绑定”的思想作为核心，因此在View和Model之间没有联系，通过ViewModel进行交互，而且Model和ViewModel之间的交互是双喜那个的，因此试图的数据的变化会同事修改数据源，而数据源数据的变化也会立即反应到View上。</p>
+<p>2,MVC:MVC是Model-View- Controller的简写。即模型-视图-控制器。M和V指的意思和MVVM中的M和V意思一样。C即Controller指的是页面业务逻辑。使用MVC的目的就是将M和V的代码分离。‘MVC是单向通信。也就是View跟Model，必须通过Controller来承上启下。MVC和MVVM的区别并不是VM完全取代了C，ViewModel存在目的在于抽离Controller中展示的业务逻辑，而不是替代Controller，其它视图操作业务等还是应该放在Controller中实现。也就是说MVVM实现的是业务逻辑组件的重用。由于mvc出现的时间比较早，前端并不那么成熟，很多业务逻辑也是在后端实现，所以前端并没有真正意义上的MVC模式。<br>MVC ，用户操作&gt; View (负责接受用户的输入操作)&gt;Controller（业务逻辑处理）&gt;Model（数据持久化）&gt;View（将结果通过View反馈给用户）</p>
+<a id="more"></a>
+<h2 id="二，vue中v-cloak-v-text-v-html-v-bind"><a href="#二，vue中v-cloak-v-text-v-html-v-bind" class="headerlink" title="二，vue中v-cloak,v-text,v-html,v-bind"></a>二，vue中v-cloak,v-text,v-html,v-bind</h2><h3 id="1-v-cloak"><a href="#1-v-cloak" class="headerlink" title="1.v-cloak"></a>1.v-cloak</h3><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">样式：</span><br><span class="line">		[v-cloak]&#123;</span><br><span class="line">			/*没加载时不显示可以消除闪烁*/</span><br><span class="line">			display: none;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">body:</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&#123;&#123; msg &#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;!--使用v-cloak可以解决插值闪烁问题--&gt;</span><br><span class="line">	&lt;p v-cloak&gt;==&#123;&#123; msg &#125;&#125;-- &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">vm:</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">			el:&quot;#c&quot;	,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&quot;你好！&quot;</span><br><span class="line">            &#125;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结果为：你好！</p>
+<h3 id="2-v-text"><a href="#2-v-text" class="headerlink" title="2.v-text"></a>2.v-text</h3><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--使用 v-text 默认没有闪烁，会将原本内容清空--&gt;</span><br><span class="line">		    &lt;h1 v-text=&quot;msg&quot;&gt;===&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-v-html"><a href="#3-v-html" class="headerlink" title="3.v-html"></a>3.v-html</h3><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-html=&quot;msg2&quot;&gt;fgyhtrf&lt;/div&gt;</span><br><span class="line">data:&#123;</span><br><span class="line">				msg:&quot;你好！&quot;,</span><br><span class="line">				msg2:&quot;&lt;h1&gt;我是一个大H &lt;/h1&gt;&quot;,</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-v-bind"><a href="#4-v-bind" class="headerlink" title="4.v-bind"></a>4.v-bind</h3><p>:v-bind 是 在vue中用来绑定属性的指令<br>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; title=&quot;按钮&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; v-bind:title=&quot;mytitle&quot; /&gt;</span><br><span class="line">	&lt;!--v-bind 是可以简写为：中也可以写合法的js表达式--&gt;</span><br><span class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot;  :title=&quot;mytitle+&apos;123&apos;&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -279,15 +267,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag1</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag2</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag3</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -343,7 +331,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/13/第一章/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/20/Vue-js的学习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -357,18 +345,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/14/Mysql语法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Mysql语法 
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2018/08/19/Bootstrop基本语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Bootstrop基本语法 </div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -387,6 +366,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue与MVVM"><span class="toc-number">1.</span> <span class="toc-text">vue与MVVM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，MVVM-与-MVC解释"><span class="toc-number">1.1.</span> <span class="toc-text">一，MVVM 与 MVC解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，vue中v-cloak-v-text-v-html-v-bind"><span class="toc-number">1.2.</span> <span class="toc-text">二，vue中v-cloak,v-text,v-html,v-bind</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-v-cloak"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.v-cloak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-v-text"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.v-text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-v-html"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.v-html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-v-bind"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.v-bind</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -506,10 +498,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
@@ -527,6 +515,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tag3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
