@@ -157,6 +157,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="=-Vue案例及代码分析" class="article article-type-=  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/21/Vue案例及代码分析/">Vue案例及代码分析</a>
+    </h1>
+  
+
+
+
+        
+        <a href="/2018/08/21/Vue案例及代码分析/" class="archive-article-date">
+  	<time datetime="2018-08-21T12:01:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
+</a>
+        
+        
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+       
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue案例及代码分析"><a href="#Vue案例及代码分析" class="headerlink" title="Vue案例及代码分析"></a>Vue案例及代码分析</h1><h2 id="一，从跑马灯代码分析"><a href="#一，从跑马灯代码分析" class="headerlink" title="一，从跑马灯代码分析"></a>一，从跑马灯代码分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;zou&quot;&gt;</span><br><span class="line">	&lt;input type=&quot;button&quot; value=&quot;浪起来~&quot; @click=&quot;lang&quot; /&gt;</span><br><span class="line">	&lt;input type=&quot;button&quot; value=&quot;低调&quot; @click=&quot;stop&quot; /&gt;</span><br><span class="line">	&lt;h1 id=&quot;zi&quot;&gt;&#123;&#123; msg &#125;&#125;&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	//在vm实例中如果需要调用data数据或者调用methods的方法需要使用this.属性名或者</span><br><span class="line">	//，this.方法名，this为new出来的对象</span><br><span class="line">	var vm = new Vue(&#123;</span><br><span class="line">		el: &quot;#zou&quot;,</span><br><span class="line">		data: &#123;</span><br><span class="line">			msg: &quot;猥琐发育，别浪~&quot;,</span><br><span class="line">			time: null,</span><br><span class="line">		&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">	lang() &#123;</span><br><span class="line">		//var _this = this;//因为定时器里的指向问题</span><br><span class="line">		//var time = setInterval(function() &#123;</span><br><span class="line">		//对字符截取</span><br><span class="line">		//var st = _this.msg.substring(0, 1)</span><br><span class="line">		//var ed = _this.msg.substring(1)</span><br><span class="line">		//字符重新组合</span><br><span class="line">		//_this.msg = ed + st</span><br><span class="line">		//&#125;, 400)</span><br><span class="line">		/*</span><br><span class="line">		* 第二种写法</span><br><span class="line">		*/</span><br><span class="line">		if(this.time!=null) return;//如果time值不为空则返回</span><br><span class="line">		this.time = setInterval(() =&gt; &#123;</span><br><span class="line">			console.log(this.msg)</span><br><span class="line">			//对字符截取</span><br><span class="line">			var st = this.msg.substring(0, 1)</span><br><span class="line">			var ed = this.msg.substring(1)</span><br><span class="line">				//字符重新组合</span><br><span class="line">			this.msg = ed + st</span><br><span class="line">		&#125;, 400)</span><br><span class="line">		</span><br><span class="line">		&#125;,</span><br><span class="line">		stop()&#123;</span><br><span class="line">			clearInterval(this.time);//清除定时器</span><br><span class="line">			</span><br><span class="line">			this.time=null;//重新赋值为空</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">//注意：vm会监听自己data的所有数据的改变，只要data数据发生改变，</span><br><span class="line">就会把最新数据从data同步到页面中去；</span><br><span class="line">//好处：程序员不需要关心如何渲染到DOM的页面中去，只需关心数据；</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/08/21/Vue案例及代码分析/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/21/Vue案例及代码分析/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="=-java异常与处理" class="article article-type-=  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -520,104 +613,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/19/Bootstrop基本语法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mysql语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/14/Mysql语法/">Mysql语法 </a>
-    </h1>
-  
-
-
-
-        
-        <a href="/2018/08/14/Mysql语法/" class="archive-article-date">
-  	<time datetime="2018-08-14T03:34:55.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        
-        
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Mysql介绍"><a href="#Mysql介绍" class="headerlink" title="Mysql介绍"></a>Mysql介绍</h1><h2 id="一，sql分类"><a href="#一，sql分类" class="headerlink" title="一，sql分类"></a>一，sql分类</h2><p>1,<strong>DDL</strong>  数据定义语言 ：用来定义数据库对象（database,table);<br>2,<strong>DML</strong>  数据操作语言 ：用来对数据中表的记录进行更新（insert,delete,update);<br>3,<strong>DQL</strong>  数据查询     ：用来查询数据库中的记录( select,from,where);<br>4,<strong>DCL</strong>  数据控制语言 :(grent)</p>
-<h2 id="二，库操作"><a href="#二，库操作" class="headerlink" title="二，库操作"></a>二，库操作</h2><h3 id="2-1启动mysql"><a href="#2-1启动mysql" class="headerlink" title="2.1启动mysql"></a>2.1启动mysql</h3><p><strong>以下代码都是在cmd命令指示符或者在mysql中输入</strong></p>
-<ul>
-<li><p>启动数据库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入密码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/08/14/Mysql语法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/14/Mysql语法/">展开全文 >></a>
         </p>
       
 
