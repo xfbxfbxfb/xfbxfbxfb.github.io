@@ -157,6 +157,218 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="=-Vue-js学习第二章" class="article article-type-=  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/26/Vue-js学习第二章/">Vue.js学习第二章</a>
+    </h1>
+  
+
+
+
+        
+        <a href="/2018/08/26/Vue-js学习第二章/" class="archive-article-date">
+  	<time datetime="2018-08-26T03:03:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-26</time>
+</a>
+        
+        
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+       
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="vue第二章"><a href="#vue第二章" class="headerlink" title="vue第二章"></a>vue第二章</h1><h2 id="一，过滤器"><a href="#一，过滤器" class="headerlink" title="一，过滤器"></a>一，过滤器</h2><h3 id="1-1普通的："><a href="#1-1普通的：" class="headerlink" title="1.1普通的："></a>1.1普通的：</h3><ul>
+<li>过滤器调用格式:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;name | 过滤器的名称 &#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue.filter(&apos;过滤器的名称&apos;,function(data)&#123;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg)&#123;</span><br><span class="line">	//return msg.replace(&apos;好&apos;,&apos;坏&apos;)//只能改变第一个，</span><br><span class="line">	return msg.replace(/好/g,&apos;坏&apos;)//利用正则改变所有的</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">msg:&quot;其实我是一个好人，所以你别紧张，好人是有好报的！&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-2-可以传参的："><a href="#1-2-可以传参的：" class="headerlink" title="1.2 可以传参的："></a>1.2 可以传参的：</h3><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test(&quot;傻&quot;,&quot;比&quot;)&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg,arg，arg2)&#123;</span><br><span class="line">	return msg.replace(/好/g,arg+arg2)//利用正则改变所有的	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-3-添加多个过滤器："><a href="#1-3-添加多个过滤器：" class="headerlink" title="1.3 添加多个过滤器："></a>1.3 添加多个过滤器：</h3><p> 代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test(&quot;傻&quot;)|mvp&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg,arg)&#123;</span><br><span class="line">	return msg.replace(/好/g,arg)//利用正则改变所有的</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">Vue.filter(&apos;mvp&apos;,function(msg)&#123;</span><br><span class="line">	return msg.replace(/人/g,&quot;比&quot;)</span><br><span class="line">		&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-4-注意"><a href="#1-4-注意" class="headerlink" title="1.4 注意"></a>1.4 注意</h3><ul>
+<li>过滤器可以用在俩个地方：mustache插值，v-bind的表达式</li>
+<li>注意过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据
+        
+          <a class="article-more-a" href="/2018/08/26/Vue-js学习第二章/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/26/Vue-js学习第二章/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="=-Vue实用函数" class="article article-type-=  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/25/Vue实用函数/">Vue案例方法 </a>
+    </h1>
+  
+
+
+
+        
+        <a href="/2018/08/25/Vue实用函数/" class="archive-article-date">
+  	<time datetime="2018-08-25T12:32:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-25</time>
+</a>
+        
+        
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+       
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="常见的Vue方法集合"><a href="#常见的Vue方法集合" class="headerlink" title="常见的Vue方法集合"></a>常见的Vue方法集合</h1><h2 id="一-关于数组的方法"><a href="#一-关于数组的方法" class="headerlink" title="一,关于数组的方法"></a>一,关于数组的方法</h2><p>forEach some filter findIndex</p>
+<h3 id="1-1forEach"><a href="#1-1forEach" class="headerlink" title="1.1forEach"></a>1.1forEach</h3><ul>
+<li>关于关键字搜索的案例（部分）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">v:</span><br><span class="line">搜索关键字:&lt;input type=&quot;text&quot; class=&quot;form-control&quot; v-model=&quot;keyword&quot;/&gt;</span><br><span class="line">&lt;tr v-for=&quot;item in serch(keyword)&quot; :key=&quot;item.id&quot;&gt;//循环</span><br><span class="line">vm:</span><br><span class="line">serch(keyword)&#123;</span><br><span class="line">    //	1，forEach()方法遍历</span><br><span class="line">    var newList = []//定义一个新的数组</span><br><span class="line">    this.list.forEach(item =&gt; &#123;</span><br><span class="line">        //列表的名字与关键字有包含则返回对应的数组</span><br><span class="line">        //-1表示不包含，关键字为&quot;&quot;时为0返回所有数组</span><br><span class="line">        if(item.name.indexOf(keyword) != -1)&#123;//查找名字相符合的关键字</span><br><span class="line">            newList.push(item) //把符合关键字的数组移到新数组中</span><br><span class="line">        &#125;						</span><br><span class="line">    &#125;)</span><br><span class="line">    return newList //返回新数组</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-2-filter"><a href="#1-2-filter" class="headerlink" title="1.2 filter"></a>1.2 filter</h3><ul>
+<li>关于关键字搜索的案例（另一种方法）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">return	this.list.filter(item =&gt; &#123;</span><br><span class="line"> //   if(item.name.indexOf(keyword)!=-1)&#123;</span><br><span class="line"> //       return item</span><br><span class="line">//&#125;</span><br><span class="line">    if(item.name.includes(keyword))&#123;</span><br><span class="line">        return item</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-3-some"><a href="#1-3-some" class="headerlink" title="1.3 some"></a>1.3 some</h3><ul>
+<li>关于删除列的案例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">v:</span><br><span class="line">&lt;a  href=&quot;#&quot;  @click.prevent=&quot;delect(item.id)&quot;&gt;删除&lt;/a&gt;	</span><br><span class="line">vm:</span><br><span class="line">delect(id)&#123;//根据id删除数据</span><br><span class="line">//两种方法</span><br><span class="line">//根据id找索引然后再调用数组的splice方法</span><br><span class="line">//利用some方法</span><br><span class="line">/*this.list.some((item,i) =&gt; &#123;</span><br><span class="line">    if(item.id == id)&#123;</span><br><span class="line">        this.list.splice(i,1);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;)*/</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-4-findindext"><a href="#1-4-findindext" class="headerlink" title="1.4 findindext"></a>1.4 findindext</h3><ul>
+<li>关于删除列的案例另一种方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var index =	this.list.findIndex(item =&gt; &#123;</span><br><span class="line">        if(item.id==id)&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">        this.list.splice(index,1);</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/08/25/Vue实用函数/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/25/Vue实用函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="=-Vue案例及代码分析" class="article article-type-=  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -408,211 +620,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/20/JS易忘记例子/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="=-Vue-js的学习" class="article article-type-=  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/20/Vue-js的学习/">Vue.js的学习</a>
-    </h1>
-  
-
-
-
-        
-        <a href="/2018/08/20/Vue-js的学习/" class="archive-article-date">
-  	<time datetime="2018-08-20T01:54:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
-</a>
-        
-        
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="vue与MVVM"><a href="#vue与MVVM" class="headerlink" title="vue与MVVM"></a>vue与MVVM</h1><h2 id="一，MVVM-与-MVC解释"><a href="#一，MVVM-与-MVC解释" class="headerlink" title="一，MVVM 与 MVC解释"></a>一，MVVM 与 MVC解释</h2><p>MVC （Model-View-Controller）</p>
-<p>M - Model ：数据保存</p>
-<p>V - View : 用户界面</p>
-<p>C - Controller ： 业务逻辑<br>1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听。这两个方向都实现的，我们称之为数据的双向绑定。</p>
-<p>MVVM是将“数据模型数据双向绑定”的思想作为核心，因此在View和Model之间没有联系，通过ViewModel进行交互，而且Model和ViewModel之间的交互是双喜那个的，因此试图的数据的变化会同事修改数据源，而数据源数据的变化也会立即反应到View上。</p>
-<p>2,MVC:MVC是Model-View- Controller的简写。即模型-视图-控制器。M和V指的意思和MVVM中的M和V意思一样。C即Controller指的是页面业务逻辑。使用MVC的目的就是将M和V的代码分离。‘MVC是单向通信。也就是View跟Model，必须通过Controller来承上启下。MVC和MVVM的区别并不是VM完全取代了C，ViewModel存在目的在于抽离Controller中展示的业务逻辑，而不是替代Controller，其它视图操作业务等还是应该放在Controller中实现。也就是说MVVM实现的是业务逻辑组件的重用。由于mvc出现的时间比较早，前端并不那么成熟，很多业务逻辑也是在后端实现，所以前端并没有真正意义上的MVC模式。<br>MVC ，用户操作&gt; View (负责接受用户的输入操作)&gt;Controller（业务逻辑处理）&gt;Model（数据持久化）&gt;View（将结果通过View反馈给用户）</p>
-        
-          <a class="article-more-a" href="/2018/08/20/Vue-js的学习/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/20/Vue-js的学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="=-Bootstrop基本语法" class="article article-type-=  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/19/Bootstrop基本语法/">Bootstrop基本语法 </a>
-    </h1>
-  
-
-
-
-        
-        <a href="/2018/08/19/Bootstrop基本语法/" class="archive-article-date">
-  	<time datetime="2018-08-19T07:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-19</time>
-</a>
-        
-        
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Bootdtrop框架的基本语法"><a href="#Bootdtrop框架的基本语法" class="headerlink" title="Bootdtrop框架的基本语法"></a>Bootdtrop框架的基本语法</h1><h2 id="一，基本模板"><a href="#一，基本模板" class="headerlink" title="一，基本模板"></a>一，基本模板</h2><p>1.1 声明字符识别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>1.2 声明文档兼容模式，表示使用IE浏览器的最新模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>1.3 设置视口的宽度(值为设备的理想宽度)，页面初始缩放值&lt;理想宽度/可见宽度&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,</span><br><span class="line">			 initial-scale=1,user-scalable=no &quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>注释：viewport视窗口，content内容为宽度为设备的宽度(因为到手机上的可看的到页面是不一样的)<br>initial初始值的比例是1，user-scalable=no设置设备(手机)不能有缩放功能<br>1.4 引入Bootstrap核心样式文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=&quot;../../css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">&lt;script src=&quot;../../js/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;!-- 引入BootStrap核心js文件 --&gt;</span><br><span class="line">		&lt;script src=&quot;../../js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/08/19/Bootstrop基本语法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bootstrop</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/19/Bootstrop基本语法/">展开全文 >></a>
         </p>
       
 

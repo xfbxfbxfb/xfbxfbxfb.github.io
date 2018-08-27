@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JS易忘记例子  | 梦里北极光的博客</title>
+  <title>Vue.js学习第二章 | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="将自己容易犯错的问题或忘记的题集记录在此  关于JavaScript题集一,易混淆1.1javascript 中 click 和onclick有什么区别1.onclick是绑定事件，告诉浏览器在鼠标点击时候要做什么2.click本身是方法,作用是触发onclick事件，只要执行了元素的click()方法，就会触发onclick事件">
-<meta name="keywords" content="学习,前端,JavaScript">
+  <meta name="description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
+<meta name="keywords" content="学习,前端,vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS易忘记例子 ">
-<meta property="og:url" content="http://yoursite.com/2018/08/20/JS易忘记例子/index.html">
+<meta property="og:title" content="Vue.js学习第二章">
+<meta property="og:url" content="http://yoursite.com/2018/08/26/Vue-js学习第二章/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
-<meta property="og:description" content="将自己容易犯错的问题或忘记的题集记录在此  关于JavaScript题集一,易混淆1.1javascript 中 click 和onclick有什么区别1.onclick是绑定事件，告诉浏览器在鼠标点击时候要做什么2.click本身是方法,作用是触发onclick事件，只要执行了元素的click()方法，就会触发onclick事件">
+<meta property="og:description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-20T11:57:25.203Z">
+<meta property="og:updated_time" content="2018-08-27T03:04:47.896Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS易忘记例子 ">
-<meta name="twitter:description" content="将自己容易犯错的问题或忘记的题集记录在此  关于JavaScript题集一,易混淆1.1javascript 中 click 和onclick有什么区别1.onclick是绑定事件，告诉浏览器在鼠标点击时候要做什么2.click本身是方法,作用是触发onclick事件，只要执行了元素的click()方法，就会触发onclick事件">
+<meta name="twitter:title" content="Vue.js学习第二章">
+<meta name="twitter:description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -159,22 +159,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="=-JS易忘记例子" class="article article-type-= " itemscope itemprop="blogPost">
+            <article id="=-Vue-js学习第二章" class="article article-type-= " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS易忘记例子 
+      Vue.js学习第二章
     </h1>
   
 
 
 
         
-        <a href="/2018/08/20/JS易忘记例子/" class="archive-article-date">
-  	<time datetime="2018-08-20T08:55:05.537Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
+        <a href="/2018/08/26/Vue-js学习第二章/" class="archive-article-date">
+  	<time datetime="2018-08-26T03:03:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-26</time>
 </a>
         
         
@@ -192,10 +192,26 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>将自己容易犯错的问题或忘记的题集记录在此</p>
-</blockquote>
-<h1 id="关于JavaScript题集"><a href="#关于JavaScript题集" class="headerlink" title="关于JavaScript题集"></a>关于JavaScript题集</h1><h2 id="一-易混淆"><a href="#一-易混淆" class="headerlink" title="一,易混淆"></a>一,易混淆</h2><h3 id="1-1javascript-中-click-和onclick有什么区别"><a href="#1-1javascript-中-click-和onclick有什么区别" class="headerlink" title="1.1javascript 中 click 和onclick有什么区别"></a>1.1javascript 中 click 和onclick有什么区别</h3><p>1.onclick是绑定事件，告诉浏览器在鼠标点击时候要做什么<br>2.click本身是方法,作用是触发onclick事件，只要执行了元素的click()方法，就会触发onclick事件</p>
+        <h1 id="vue第二章"><a href="#vue第二章" class="headerlink" title="vue第二章"></a>vue第二章</h1><h2 id="一，过滤器"><a href="#一，过滤器" class="headerlink" title="一，过滤器"></a>一，过滤器</h2><h3 id="1-1普通的："><a href="#1-1普通的：" class="headerlink" title="1.1普通的："></a>1.1普通的：</h3><ul>
+<li>过滤器调用格式:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;name | 过滤器的名称 &#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue.filter(&apos;过滤器的名称&apos;,function(data)&#123;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg)&#123;</span><br><span class="line">	//return msg.replace(&apos;好&apos;,&apos;坏&apos;)//只能改变第一个，</span><br><span class="line">	return msg.replace(/好/g,&apos;坏&apos;)//利用正则改变所有的</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">msg:&quot;其实我是一个好人，所以你别紧张，好人是有好报的！&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-2-可以传参的："><a href="#1-2-可以传参的：" class="headerlink" title="1.2 可以传参的："></a>1.2 可以传参的：</h3><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test(&quot;傻&quot;,&quot;比&quot;)&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg,arg，arg2)&#123;</span><br><span class="line">	return msg.replace(/好/g,arg+arg2)//利用正则改变所有的	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-3-添加多个过滤器："><a href="#1-3-添加多个过滤器：" class="headerlink" title="1.3 添加多个过滤器："></a>1.3 添加多个过滤器：</h3><p> 代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test(&quot;傻&quot;)|mvp&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg,arg)&#123;</span><br><span class="line">	return msg.replace(/好/g,arg)//利用正则改变所有的</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">Vue.filter(&apos;mvp&apos;,function(msg)&#123;</span><br><span class="line">	return msg.replace(/人/g,&quot;比&quot;)</span><br><span class="line">		&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-4-注意"><a href="#1-4-注意" class="headerlink" title="1.4 注意"></a>1.4 注意</h3><ul>
+<li>过滤器可以用在俩个地方：mustache插值，v-bind的表达式</li>
+<li>注意过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据<a id="more"></a>
+<h3 id="1-5局部与全局过滤器"><a href="#1-5局部与全局过滤器" class="headerlink" title="1.5局部与全局过滤器"></a>1.5局部与全局过滤器</h3></li>
+</ul>
+<ol>
+<li>全局过滤器<br>全局过滤器：就是能在任意一个div使用，一般独立定义在js中</li>
+<li>局部过滤器<br>局部过滤器：一般定义在一个Vue中用filters:后面书写定义的方法，只能用在Vue规定的div中</li>
+<li>局部与全局的区别<br>区别：当俩种都有时且过滤名称相同，有先使用局部过滤器<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;c&quot;&gt;</span><br><span class="line">	&lt;h3&gt;&#123;&#123;msg|filMsg&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;c1&quot;&gt;</span><br><span class="line">	&lt;h3&gt;&#123;&#123;msg|filMsg&#125;&#125;&lt;/h3&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		//全局过滤器</span><br><span class="line">		Vue.filter(&apos;filMsg&apos;,function(msg)&#123;</span><br><span class="line">			return msg.replace(&apos;这是&apos;,&apos;这真是&apos;)</span><br><span class="line">		&#125;)			</span><br><span class="line">		var vm = new Vue(&#123;</span><br><span class="line">			el:&quot;#c&quot;,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&quot;这是全局过滤&quot;</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;					</span><br><span class="line">			&#125;				</span><br><span class="line">		&#125;)</span><br><span class="line">		//定义局部过滤器</span><br><span class="line">		var vm2 = new Vue(&#123;</span><br><span class="line">			el:&quot;#c1&quot;,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&quot;这是全局过滤&quot;</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;					</span><br><span class="line">			&#125;,</span><br><span class="line">		// 局部过滤器的方法</span><br><span class="line">			filters:&#123;</span><br><span class="line">				filMsg:function(msg)&#123;</span><br><span class="line">					return msg.replace(&apos;全局&apos;,&apos;局部--&apos;)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>代码结果为：<br>div#c:这真是全局过滤<br>div#c1:这是局部–过滤</p>
 
       
 
@@ -243,7 +259,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -299,7 +315,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/20/JS易忘记例子/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/26/Vue-js学习第二章/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -313,18 +329,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/20/java异常与处理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java异常与处理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/20/Vue-js的学习第一章/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue.js的学习第一章</div>
+    <a href="/2018/08/25/Vue实用函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue案例方法 </div>
       <i class="icon-circle-right"></i>
     </a>
   
