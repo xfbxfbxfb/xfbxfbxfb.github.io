@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-27T03:04:47.896Z">
+<meta property="og:updated_time" content="2018-08-29T09:55:38.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js学习第二章">
 <meta name="twitter:description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
@@ -212,6 +212,44 @@
 </li>
 </ol>
 <p>代码结果为：<br>div#c:这真是全局过滤<br>div#c1:这是局部–过滤</p>
+<h2 id="二，ES6的字符串的填充"><a href="#二，ES6的字符串的填充" class="headerlink" title="二，ES6的字符串的填充"></a>二，ES6的字符串的填充</h2><h3 id="1-padStart"><a href="#1-padStart" class="headerlink" title="1.padStart"></a>1.padStart</h3><ol>
+<li>格式：padStart(最大长度，’最前面添加的字符串’)</li>
+<li>解释：对于字符串根据最大长度，当长度小于格式中的最大长度时，在最前面添加所要的字符串</li>
+<li>举例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">v:</span><br><span class="line">&lt;h2&gt;&#123;&#123;star&#125;&#125;&lt;/h2&gt;</span><br><span class="line">vm:</span><br><span class="line">star:&quot;1&quot;.padStart(2,&quot;0&quot;),</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果为：<br>没添加为1，添加为01</p>
+<h3 id="2-padEnd"><a href="#2-padEnd" class="headerlink" title="2.padEnd"></a>2.padEnd</h3><ol>
+<li>格式：padEnd(最大长度，’最前面添加的字符串’)</li>
+<li>解释：对于字符串根据最大长度，当长度小于格式中的最大长度时，在最后面添加所要的字符串</li>
+<li>举例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">v:</span><br><span class="line">&lt;h2&gt;&#123;&#123;end&#125;&#125;&lt;/h2&gt;</span><br><span class="line">vm:</span><br><span class="line">end:&quot;1&quot;.padStart(2,&quot;0&quot;),</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果为：<br>没添加为1，添加为10</p>
+<h2 id="三，自定义按键修饰符"><a href="#三，自定义按键修饰符" class="headerlink" title="三，自定义按键修饰符"></a>三，自定义按键修饰符</h2><h3 id="1-vue自带的修饰符"><a href="#1-vue自带的修饰符" class="headerlink" title="1.vue自带的修饰符"></a>1.vue自带的修饰符</h3><ol>
+<li>全部按键别名</li>
+</ol>
+<ul>
+<li>.enter</li>
+<li>.tab</li>
+<li>.delete (捕获“删除”和“退格”键)</li>
+<li>.esc</li>
+<li>.space</li>
+<li>.up</li>
+<li>.down</li>
+<li>.left</li>
+<li>.right</li>
+</ul>
+<ol start="2">
+<li>举例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-on:keyup.enter=&quot;submit&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解释：当按下enter键时触发方法</p>
+<ol start="3">
+<li>可以通过全局 config.keyCodes 对象自定义按键修饰符别名：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//全局定义变量</span><br><span class="line">Vue.config.keyCodes.f1 = 112</span><br><span class="line">//在v中使用</span><br><span class="line">&lt;input v-on:keyup.f1=&quot;submit&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="https://www.cnblogs.com/wuhua1/p/6686237.html" target="_blank" rel="noopener">js 里面的键盘事件对应的键码</a></p>
 
       
 
@@ -365,6 +403,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2018/08/26/Vue-js学习第二章/",
+  owner: 'xfbxfbxfb',
+  repo: 'xfbxfbxfb.github.io',
+  oauth: {
+    client_id: '120088d3609163358ead',
+    client_secret: '077afb756d5c43ccbb7ea997aaf376ffbf4b5bd3',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -477,11 +531,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -549,19 +603,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://xfbxfbxfb.github.io/resume/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Web前端简历</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://xfbxfbxfb.github.io/love/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>爱心树表白</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://blog.csdn.net/weixin_42796909" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>CSDN博客</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="http://www.cnblogs.com/xdp-gacl/category/574705.html" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>web前端孤傲苍狼</a>
             </li>
           
             <li class="search-li">
@@ -580,7 +634,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;我只是个弱鸡&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;我只是个弱鸡&lt;br&gt; 谢谢大家</div>
   	  	
     	</section>
     
