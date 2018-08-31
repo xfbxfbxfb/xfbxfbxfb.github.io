@@ -8,18 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Vue.js的学习第一章 | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue与MVVM一，MVVM 与 MVC解释MVC （Model-View-Controller） M - Model ：数据保存 V - View : 用户界面 C - Controller ： 业务逻辑1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心">
-<meta name="keywords" content="学习,前端,vue">
+  <meta name="keywords" content="学习,前端,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue.js的学习第一章">
 <meta property="og:url" content="http://yoursite.com/2018/08/20/Vue-js的学习第一章/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
-<meta property="og:description" content="vue与MVVM一，MVVM 与 MVC解释MVC （Model-View-Controller） M - Model ：数据保存 V - View : 用户界面 C - Controller ： 业务逻辑1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-26T03:05:17.583Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535729033319&di=65c7b9540d300b56996772a93f1f3ac5&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01a34a591d8fe8a801216a3e1f319d.jpg">
+<meta property="og:updated_time" content="2018-08-31T12:41:15.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js的学习第一章">
-<meta name="twitter:description" content="vue与MVVM一，MVVM 与 MVC解释MVC （Model-View-Controller） M - Model ：数据保存 V - View : 用户界面 C - Controller ： 业务逻辑1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535729033319&di=65c7b9540d300b56996772a93f1f3ac5&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01a34a591d8fe8a801216a3e1f319d.jpg">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -216,13 +215,14 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="vue与MVVM"><a href="#vue与MVVM" class="headerlink" title="vue与MVVM"></a>vue与MVVM</h1><h2 id="一，MVVM-与-MVC解释"><a href="#一，MVVM-与-MVC解释" class="headerlink" title="一，MVVM 与 MVC解释"></a>一，MVVM 与 MVC解释</h2><p>MVC （Model-View-Controller）</p>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1535729033319&amp;di=65c7b9540d300b56996772a93f1f3ac5&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01a34a591d8fe8a801216a3e1f319d.jpg" alt=""><br><a id="more"></a></p>
+<h1 id="vue与MVVM"><a href="#vue与MVVM" class="headerlink" title="vue与MVVM"></a>vue与MVVM</h1><h2 id="一，MVVM-与-MVC解释"><a href="#一，MVVM-与-MVC解释" class="headerlink" title="一，MVVM 与 MVC解释"></a>一，MVVM 与 MVC解释</h2><p>MVC （Model-View-Controller）</p>
 <p>M - Model ：数据保存</p>
 <p>V - View : 用户界面</p>
 <p>C - Controller ： 业务逻辑<br>1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听。这两个方向都实现的，我们称之为数据的双向绑定。</p>
 <p>MVVM是将“数据模型数据双向绑定”的思想作为核心，因此在View和Model之间没有联系，通过ViewModel进行交互，而且Model和ViewModel之间的交互是双喜那个的，因此试图的数据的变化会同事修改数据源，而数据源数据的变化也会立即反应到View上。</p>
 <p>2,MVC:MVC是Model-View- Controller的简写。即模型-视图-控制器。M和V指的意思和MVVM中的M和V意思一样。C即Controller指的是页面业务逻辑。使用MVC的目的就是将M和V的代码分离。‘MVC是单向通信。也就是View跟Model，必须通过Controller来承上启下。MVC和MVVM的区别并不是VM完全取代了C，ViewModel存在目的在于抽离Controller中展示的业务逻辑，而不是替代Controller，其它视图操作业务等还是应该放在Controller中实现。也就是说MVVM实现的是业务逻辑组件的重用。由于mvc出现的时间比较早，前端并不那么成熟，很多业务逻辑也是在后端实现，所以前端并没有真正意义上的MVC模式。<br>MVC ，用户操作&gt; View (负责接受用户的输入操作)&gt;Controller（业务逻辑处理）&gt;Model（数据持久化）&gt;View（将结果通过View反馈给用户）</p>
-<a id="more"></a>
+<!-- more -->
 <h2 id="二，vue中v-cloak-v-text-v-html-v-bind"><a href="#二，vue中v-cloak-v-text-v-html-v-bind" class="headerlink" title="二，vue中v-cloak,v-text,v-html,v-bind"></a>二，vue中v-cloak,v-text,v-html,v-bind</h2><h3 id="1-v-cloak"><a href="#1-v-cloak" class="headerlink" title="1.v-cloak"></a>1.v-cloak</h3><p>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">样式：</span><br><span class="line">		[v-cloak]&#123;</span><br><span class="line">			/*没加载时不显示可以消除闪烁*/</span><br><span class="line">			display: none;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">body:</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&#123;&#123; msg &#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;!--使用v-cloak可以解决插值闪烁问题--&gt;</span><br><span class="line">	&lt;p v-cloak&gt;==&#123;&#123; msg &#125;&#125;-- &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">vm:</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">			el:&quot;#c&quot;	,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&quot;你好！&quot;</span><br><span class="line">            &#125;</span><br><span class="line">)&#125;</span><br></pre></td></tr></table></figure></p>
 <p>结果为：你好！</p>
 <h3 id="2-v-text"><a href="#2-v-text" class="headerlink" title="2.v-text"></a>2.v-text</h3><p>能覆盖原有内容<br>代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--使用 v-text 默认没有闪烁，会将原本内容清空--&gt;</span><br><span class="line">		    &lt;h1 v-text=&quot;msg&quot;&gt;===&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p>
@@ -612,11 +612,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -186,12 +186,7 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="vue与MVVM"><a href="#vue与MVVM" class="headerlink" title="vue与MVVM"></a>vue与MVVM</h1><h2 id="一，MVVM-与-MVC解释"><a href="#一，MVVM-与-MVC解释" class="headerlink" title="一，MVVM 与 MVC解释"></a>一，MVVM 与 MVC解释</h2><p>MVC （Model-View-Controller）</p>
-<p>M - Model ：数据保存</p>
-<p>V - View : 用户界面</p>
-<p>C - Controller ： 业务逻辑<br>1，MVVM:MVVM是Model-View-ViewModel的简写。即模型-视图-视图模型。【模型】M指的是后端传递的数据。【视图】v指的是所看到的页面。【视图模型】vm mvvm模式的核心，它是连接view和model的桥梁。它有两个方向：一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定。二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听。这两个方向都实现的，我们称之为数据的双向绑定。</p>
-<p>MVVM是将“数据模型数据双向绑定”的思想作为核心，因此在View和Model之间没有联系，通过ViewModel进行交互，而且Model和ViewModel之间的交互是双喜那个的，因此试图的数据的变化会同事修改数据源，而数据源数据的变化也会立即反应到View上。</p>
-<p>2,MVC:MVC是Model-View- Controller的简写。即模型-视图-控制器。M和V指的意思和MVVM中的M和V意思一样。C即Controller指的是页面业务逻辑。使用MVC的目的就是将M和V的代码分离。‘MVC是单向通信。也就是View跟Model，必须通过Controller来承上启下。MVC和MVVM的区别并不是VM完全取代了C，ViewModel存在目的在于抽离Controller中展示的业务逻辑，而不是替代Controller，其它视图操作业务等还是应该放在Controller中实现。也就是说MVVM实现的是业务逻辑组件的重用。由于mvc出现的时间比较早，前端并不那么成熟，很多业务逻辑也是在后端实现，所以前端并没有真正意义上的MVC模式。<br>MVC ，用户操作&gt; View (负责接受用户的输入操作)&gt;Controller（业务逻辑处理）&gt;Model（数据持久化）&gt;View（将结果通过View反馈给用户）</p>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1535729033319&amp;di=65c7b9540d300b56996772a93f1f3ac5&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01a34a591d8fe8a801216a3e1f319d.jpg" alt=""><br>
         
           <a class="article-more-a" href="/2018/08/20/Vue-js的学习第一章/#more">more >></a>
         
@@ -295,10 +290,7 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Bootdtrop框架的基本语法"><a href="#Bootdtrop框架的基本语法" class="headerlink" title="Bootdtrop框架的基本语法"></a>Bootdtrop框架的基本语法</h1><h2 id="一，基本模板"><a href="#一，基本模板" class="headerlink" title="一，基本模板"></a>一，基本模板</h2><p>1.1 声明字符识别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>1.2 声明文档兼容模式，表示使用IE浏览器的最新模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>1.3 设置视口的宽度(值为设备的理想宽度)，页面初始缩放值&lt;理想宽度/可见宽度&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,</span><br><span class="line">			 initial-scale=1,user-scalable=no &quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>注释：viewport视窗口，content内容为宽度为设备的宽度(因为到手机上的可看的到页面是不一样的)<br>initial初始值的比例是1，user-scalable=no设置设备(手机)不能有缩放功能<br>1.4 引入Bootstrap核心样式文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href=&quot;../../css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">&lt;script src=&quot;../../js/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;!-- 引入BootStrap核心js文件 --&gt;</span><br><span class="line">		&lt;script src=&quot;../../js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1536324943&amp;di=66988d7b91ed8508801a65f869bcbfc1&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F89b0b6ddd93f7d530090ab59fd28ff0178d886c6.jpg" alt=""><br>
         
           <a class="article-more-a" href="/2018/08/19/Bootstrop基本语法/#more">more >></a>
         
@@ -391,16 +383,7 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Mysql介绍"><a href="#Mysql介绍" class="headerlink" title="Mysql介绍"></a>Mysql介绍</h1><h2 id="一，sql分类"><a href="#一，sql分类" class="headerlink" title="一，sql分类"></a>一，sql分类</h2><p>1,<strong>DDL</strong>  数据定义语言 ：用来定义数据库对象（database,table);<br>2,<strong>DML</strong>  数据操作语言 ：用来对数据中表的记录进行更新（insert,delete,update);<br>3,<strong>DQL</strong>  数据查询     ：用来查询数据库中的记录( select,from,where);<br>4,<strong>DCL</strong>  数据控制语言 :(grent)</p>
-<h2 id="二，库操作"><a href="#二，库操作" class="headerlink" title="二，库操作"></a>二，库操作</h2><h3 id="2-1启动mysql"><a href="#2-1启动mysql" class="headerlink" title="2.1启动mysql"></a>2.1启动mysql</h3><p><strong>以下代码都是在cmd命令指示符或者在mysql中输入</strong></p>
-<ul>
-<li><p>启动数据库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入密码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b10000_10000&amp;sec=1535720258&amp;di=1bd23c182260ae3a28919edabeaab71c&amp;src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F69dc7c8571c58855c6d783a61405818c214ad0df.jpg" alt=""><br>
         
           <a class="article-more-a" href="/2018/08/14/Mysql语法/#more">more >></a>
         
@@ -788,11 +771,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">

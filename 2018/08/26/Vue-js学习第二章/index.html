@@ -8,18 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Vue.js学习第二章 | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
-<meta name="keywords" content="学习,前端,vue">
+  <meta name="keywords" content="学习,前端,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue.js学习第二章">
 <meta property="og:url" content="http://yoursite.com/2018/08/26/Vue-js学习第二章/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
-<meta property="og:description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-29T09:55:38.017Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536326300&di=a12d623622c9b747f372d4352eaf7e40&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.laozu.com%2Fueditor%2F20170625%2F594f0c14d2aa1.jpg">
+<meta property="og:updated_time" content="2018-08-31T13:18:59.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js学习第二章">
-<meta name="twitter:description" content="vue第二章一，过滤器1.1普通的： 过滤器调用格式:1&amp;#123;&amp;#123;name | 过滤器的名称 &amp;#125;&amp;#125;   过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据12Vue.filter(&amp;apos;过滤器的名称&amp;apos;,function(data)&amp;#123;&amp;#125;) 代码：1234567&amp;lt;p&amp;gt">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536326300&di=a12d623622c9b747f372d4352eaf7e40&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.laozu.com%2Fueditor%2F20170625%2F594f0c14d2aa1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -192,7 +191,8 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="vue第二章"><a href="#vue第二章" class="headerlink" title="vue第二章"></a>vue第二章</h1><h2 id="一，过滤器"><a href="#一，过滤器" class="headerlink" title="一，过滤器"></a>一，过滤器</h2><h3 id="1-1普通的："><a href="#1-1普通的：" class="headerlink" title="1.1普通的："></a>1.1普通的：</h3><ul>
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1536326300&amp;di=a12d623622c9b747f372d4352eaf7e40&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimg.laozu.com%2Fueditor%2F20170625%2F594f0c14d2aa1.jpg" alt=""><br><a id="more"></a></p>
+<h1 id="vue第二章"><a href="#vue第二章" class="headerlink" title="vue第二章"></a>vue第二章</h1><h2 id="一，过滤器"><a href="#一，过滤器" class="headerlink" title="一，过滤器"></a>一，过滤器</h2><h3 id="1-1普通的："><a href="#1-1普通的：" class="headerlink" title="1.1普通的："></a>1.1普通的：</h3><ul>
 <li>过滤器调用格式:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;name | 过滤器的名称 &#125;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -202,10 +202,9 @@
 <h3 id="1-3-添加多个过滤器："><a href="#1-3-添加多个过滤器：" class="headerlink" title="1.3 添加多个过滤器："></a>1.3 添加多个过滤器：</h3><p> 代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123;msg | test(&quot;傻&quot;)|mvp&#125;&#125;&lt;/p&gt;</span><br><span class="line">Vue.filter(&apos;test&apos;,function(msg,arg)&#123;</span><br><span class="line">	return msg.replace(/好/g,arg)//利用正则改变所有的</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br><span class="line">Vue.filter(&apos;mvp&apos;,function(msg)&#123;</span><br><span class="line">	return msg.replace(/人/g,&quot;比&quot;)</span><br><span class="line">		&#125;)</span><br></pre></td></tr></table></figure></p>
 <h3 id="1-4-注意"><a href="#1-4-注意" class="headerlink" title="1.4 注意"></a>1.4 注意</h3><ul>
 <li>过滤器可以用在俩个地方：mustache插值，v-bind的表达式</li>
-<li>注意过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据<a id="more"></a>
-<h3 id="1-5局部与全局过滤器"><a href="#1-5局部与全局过滤器" class="headerlink" title="1.5局部与全局过滤器"></a>1.5局部与全局过滤器</h3></li>
+<li>注意过滤器的function第一个参数(data),已经规定死了,永远都是过滤器管道符(‘|’)前面传来的数据</li>
 </ul>
-<ol>
+<h3 id="1-5局部与全局过滤器"><a href="#1-5局部与全局过滤器" class="headerlink" title="1.5局部与全局过滤器"></a>1.5局部与全局过滤器</h3><ol>
 <li>全局过滤器<br>全局过滤器：就是能在任意一个div使用，一般独立定义在js中</li>
 <li>局部过滤器<br>局部过滤器：一般定义在一个Vue中用filters:后面书写定义的方法，只能用在Vue规定的div中</li>
 <li>局部与全局的区别<br>区别：当俩种都有时且过滤名称相同，有先使用局部过滤器<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;c&quot;&gt;</span><br><span class="line">	&lt;h3&gt;&#123;&#123;msg|filMsg&#125;&#125;&lt;/h3&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;c1&quot;&gt;</span><br><span class="line">	&lt;h3&gt;&#123;&#123;msg|filMsg&#125;&#125;&lt;/h3&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		//全局过滤器</span><br><span class="line">		Vue.filter(&apos;filMsg&apos;,function(msg)&#123;</span><br><span class="line">			return msg.replace(&apos;这是&apos;,&apos;这真是&apos;)</span><br><span class="line">		&#125;)			</span><br><span class="line">		var vm = new Vue(&#123;</span><br><span class="line">			el:&quot;#c&quot;,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&quot;这是全局过滤&quot;</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;					</span><br><span class="line">			&#125;				</span><br><span class="line">		&#125;)</span><br><span class="line">		//定义局部过滤器</span><br><span class="line">		var vm2 = new Vue(&#123;</span><br><span class="line">			el:&quot;#c1&quot;,</span><br><span class="line">			data:&#123;</span><br><span class="line">				msg:&quot;这是全局过滤&quot;</span><br><span class="line">			&#125;,</span><br><span class="line">			methods:&#123;					</span><br><span class="line">			&#125;,</span><br><span class="line">		// 局部过滤器的方法</span><br><span class="line">			filters:&#123;</span><br><span class="line">				filMsg:function(msg)&#123;</span><br><span class="line">					return msg.replace(&apos;全局&apos;,&apos;局部--&apos;)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br></pre></td></tr></table></figure>
@@ -531,11 +530,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
