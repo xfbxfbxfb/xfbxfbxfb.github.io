@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536324943&di=66988d7b91ed8508801a65f869bcbfc1&imgtype=jpg&er=1&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F89b0b6ddd93f7d530090ab59fd28ff0178d886c6.jpg">
-<meta property="og:updated_time" content="2018-09-09T14:06:38.591Z">
+<meta property="og:updated_time" content="2018-09-13T14:32:19.167Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bootstrop基本语法 ">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536324943&di=66988d7b91ed8508801a65f869bcbfc1&imgtype=jpg&er=1&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F89b0b6ddd93f7d530090ab59fd28ff0178d886c6.jpg">
@@ -194,7 +194,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bootdtrop框架的基本语法"><span class="toc-number">1.</span> <span class="toc-text">Bootdtrop框架的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，基本模板"><span class="toc-number">1.1.</span> <span class="toc-text">一，基本模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，模块讲解"><span class="toc-number">1.2.</span> <span class="toc-text">二，模块讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，最简导航栏"><span class="toc-number">1.2.1.</span> <span class="toc-text">一，最简导航栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，排版字体各种样式"><span class="toc-number">1.2.2.</span> <span class="toc-text">二，排版字体各种样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，删格系统与屏幕适配"><span class="toc-number">1.2.3.</span> <span class="toc-text">三，删格系统与屏幕适配</span></a></li></ol></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bootdtrop框架的基本语法"><span class="toc-number">1.</span> <span class="toc-text">Bootdtrop框架的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，基本模板"><span class="toc-number">1.1.</span> <span class="toc-text">一，基本模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，模块讲解"><span class="toc-number">1.2.</span> <span class="toc-text">二，模块讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，最简导航栏"><span class="toc-number">1.2.1.</span> <span class="toc-text">一，最简导航栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，排版字体各种样式"><span class="toc-number">1.2.2.</span> <span class="toc-text">二，排版字体各种样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，栅格系统与屏幕适配"><span class="toc-number">1.2.3.</span> <span class="toc-text">三，栅格系统与屏幕适配</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一，-media与-media-screen区别"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">一，@media与@media screen区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二，Bootstrap中的屏幕适应"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">二，Bootstrap中的屏幕适应</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，多种表格的创建"><span class="toc-number">1.2.4.</span> <span class="toc-text">四，多种表格的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一，第一种样式"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">一，第一种样式</span></a></li></ol></li></ol></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -252,7 +252,54 @@
 <p>代码输出为：<del>正在学习请勿打扰</del><br>8.字体位置标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;text-left&quot;&gt;左边&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;text-center&quot;&gt;中间&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;text-right&quot;&gt;右边&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
 <p>9.字符串大小写设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;text-uppercase&quot;&gt;asdfadf转大写&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;text-lowercase&quot;&gt; HSDFSDHGHL转小写&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;text-capitalize&quot;&gt;sadfsdhg首字母大写&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
 <p>标签abbr属性适合所有浏览器<br><abbr title="Phone"> 电话</abbr></p>
-<h3 id="三，删格系统与屏幕适配"><a href="#三，删格系统与屏幕适配" class="headerlink" title="三，删格系统与屏幕适配"></a>三，删格系统与屏幕适配</h3><div class="col-md-4">col-md-1</div>
+<h3 id="三，栅格系统与屏幕适配"><a href="#三，栅格系统与屏幕适配" class="headerlink" title="三，栅格系统与屏幕适配"></a>三，栅格系统与屏幕适配</h3><h4 id="一，-media与-media-screen区别"><a href="#一，-media与-media-screen区别" class="headerlink" title="一，@media与@media screen区别"></a>一，@media与@media screen区别</h4><ul>
+<li>@media screen的css在打印设备里是无效的，而@media在打印设备里是有效的，如果css需要用在打印设备里，那么就用@media ，否则，就用@media screen。<br>不过这只是笼统的做法，其实如果把“screen”换为“print”，写为@media print，那么该css就可用到打印设备上了，但要注意，@media print声明的css只能在打印设备上有效。 </li>
+<li>Media Queries工作方式:</li>
+</ul>
+<ol>
+<li>1种是直接在link中判断设备的尺寸，然后引用不同的css文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styleA.css&quot; media=&quot;screen and (min-width: 400px)&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解释：意思是当屏幕的宽度大于等于400px的时候，应用styleA.css<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styleB.css&quot;  media=&quot;screen and (min-width: 600px) and (max-width: 800px)&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>解释：意思是当屏幕的宽度大于600小于800时，应用styleB.css</p>
+<ol start="2">
+<li>另一种方式，即是直接写在 style 标签里：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (max-width: 600px) &#123; /*当屏幕尺寸小于600px时，应用下面的CSS样式*/</span><br><span class="line">  .class &#123;</span><br><span class="line">    background: #ccc;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@media screen and (min-width: 600px) &#123; /*当屏幕尺寸大于600px时，应用下面的CSS样式*/</span><br><span class="line">  .class &#123;</span><br><span class="line">    background: #ccc;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如果需要用在打印设备上用@media即可</p>
+<h4 id="二，Bootstrap中的屏幕适应"><a href="#二，Bootstrap中的屏幕适应" class="headerlink" title="二，Bootstrap中的屏幕适应"></a>二，Bootstrap中的屏幕适应</h4><ul>
+<li><p>col-sm- ,col-md-,col-lg-<br>col-sm-:@media (min-width: 768px){ //&gt;=768的设备 }<br>col-md-:@media (min-width: 992px){ //&gt;=992的设备 }<br>col-lg-:@media (min-width: 1200){ //&gt;=1200的设备 }<br><strong>注意：</strong>当用min时一定是从小拍到大，max时则相反,最大个数为12个<br><a href="http://www.511yj.com/media-media-screen.html#toc-2" target="_blank" rel="noopener">更多关于屏幕适配</a></p>
+</li>
+<li><p>栅格的右移动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;col-md-4 col-md-offset-1&quot;&gt;本框向右移动&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：在屏大于992px时占屏幕的12分之四向右移动1格</p>
+<ul>
+<li>栅格的左右拖拉<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;col-md-9 col-md-push-3&quot; &gt;col-md-9&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;col-md-3 col-md-pull-9&quot;&gt;col-md-3&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：占9格的向右推进3格占3格的向左拉3格</p>
+<ul>
+<li>栅格的嵌套<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;row&quot;&gt;</span><br><span class="line">&lt;div class=&quot;col-xs-10&quot;&gt;</span><br><span class="line">    第一个</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;col-md-5&quot;&gt;第二个&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;col-md-7&quot;&gt;第三个&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;		</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：第一为大格，第二和第三是在第一格里分为12格</p>
+<h3 id="四，多种表格的创建"><a href="#四，多种表格的创建" class="headerlink" title="四，多种表格的创建"></a>四，多种表格的创建</h3><h4 id="一，第一种样式"><a href="#一，第一种样式" class="headerlink" title="一，第一种样式"></a>一，第一种样式</h4><ul>
+<li>table标签的解释<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;table-responsive container&quot;&gt;</span><br><span class="line">&lt;table class=&quot;table  table-hover table-condensed table-bordered&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：table-responsive可以在屏幕小的时候可以滚动<br>table-hover鼠标停留在上面时背景颜色改变，table-condensed加边框，<br>table-bordered表格变的更加紧凑</p>
+<ul>
+<li>单元格的第一种背景<br>如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">绿色</span><br><span class="line">&lt;tr class=&quot;success&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释： 此一行的背景颜色为绿色字颜色为黑色当鼠标在此行时颜色加深<br>颜色还有success:绿色，danger：红色，info：蓝色，warning：黄色，active：白色</p>
+<ul>
+<li>单元格的第二种背景<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;tr class=&quot;alert-success&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：此一行的背景颜色为绿色字颜色为 <strong>绿色</strong> 当鼠标在此行时背景颜色变白色<br>颜色还有alert-success:绿色，alert-danger：红色，alert-info：蓝色，alert-warning：黄色，active：白色</p>
 
       
 
@@ -408,7 +455,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bootdtrop框架的基本语法"><span class="toc-number">1.</span> <span class="toc-text">Bootdtrop框架的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，基本模板"><span class="toc-number">1.1.</span> <span class="toc-text">一，基本模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，模块讲解"><span class="toc-number">1.2.</span> <span class="toc-text">二，模块讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，最简导航栏"><span class="toc-number">1.2.1.</span> <span class="toc-text">一，最简导航栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，排版字体各种样式"><span class="toc-number">1.2.2.</span> <span class="toc-text">二，排版字体各种样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，删格系统与屏幕适配"><span class="toc-number">1.2.3.</span> <span class="toc-text">三，删格系统与屏幕适配</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bootdtrop框架的基本语法"><span class="toc-number">1.</span> <span class="toc-text">Bootdtrop框架的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，基本模板"><span class="toc-number">1.1.</span> <span class="toc-text">一，基本模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二，模块讲解"><span class="toc-number">1.2.</span> <span class="toc-text">二，模块讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，最简导航栏"><span class="toc-number">1.2.1.</span> <span class="toc-text">一，最简导航栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，排版字体各种样式"><span class="toc-number">1.2.2.</span> <span class="toc-text">二，排版字体各种样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，栅格系统与屏幕适配"><span class="toc-number">1.2.3.</span> <span class="toc-text">三，栅格系统与屏幕适配</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一，-media与-media-screen区别"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">一，@media与@media screen区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二，Bootstrap中的屏幕适应"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">二，Bootstrap中的屏幕适应</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，多种表格的创建"><span class="toc-number">1.2.4.</span> <span class="toc-text">四，多种表格的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一，第一种样式"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">一，第一种样式</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -556,10 +603,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
@@ -569,6 +612,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
