@@ -17,7 +17,7 @@
 <meta property="og:description" content="这笔记主要是为了记录常见的CSS样式，主要是这些样式是很容易忘记的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535777690064&di=22975aa6d3a7e4260af4df4251b26b73&imgtype=0&src=http%3A%2F%2Fit.chinairn.com%2Fuserfiles%2F20170704%2F20170704141924_8821.jpg">
-<meta property="og:updated_time" content="2018-09-24T12:26:47.137Z">
+<meta property="og:updated_time" content="2018-09-27T12:32:35.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS易忘样式 ">
 <meta name="twitter:description" content="这笔记主要是为了记录常见的CSS样式，主要是这些样式是很容易忘记的">
@@ -50,13 +50,13 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/头像.jpg" class="js-avatar">
+			<img src="/img/头像2.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">梦里北极光</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">有点逗比，有点傻</p>
+		<p class="header-subtitle">想去的地方很远</p>
 		
 
 		<nav class="header-menu">
@@ -110,13 +110,13 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/头像.jpg" class="js-avatar">
+				<img src="/img/头像2.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">梦里北极光</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>有点逗比，有点傻<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>想去的地方很远<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -197,7 +197,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何图片重叠"><span class="toc-number">2.</span> <span class="toc-text">如何图片重叠</span></a></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -229,6 +229,12 @@
 <h3 id="k歌效果案例"><a href="#k歌效果案例" class="headerlink" title="k歌效果案例"></a>k歌效果案例</h3><ul>
 <li>解释<br>这案例利用了css3中的效果，思路为背景为渐变颜色将上面的字体设置为透明，<br>将两种颜色设置占空比改变实现k歌字体的效果<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;k歌效果&lt;/title&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;style&gt;</span><br><span class="line">		.a &#123;</span><br><span class="line">			width: 1400px;</span><br><span class="line">			height: 30px;</span><br><span class="line">		</span><br><span class="line">			background: wheat;</span><br><span class="line">			/*设置一个渐变的背景*/</span><br><span class="line">			background-image: linear-gradient(to right, blue, wheat);</span><br><span class="line">			/*我们将渐变的背景改变下，让他颜色分界。*/</span><br><span class="line">			background-image: linear-gradient(to right,  blue 30%, wheat 0%);</span><br><span class="line">			/*将背景颜色在字中显示出来,*/</span><br><span class="line">			-webkit-background-clip: text;</span><br><span class="line">			/*将字体设置为透明*/</span><br><span class="line">			-webkit-text-fill-color: transparent;</span><br><span class="line">			font-size: 150%;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div class=&quot;a&quot; &gt;</span><br><span class="line">			你想回家吗？不想，加班使我快乐！你想回家吗？不想，加班使我快乐！你想回家吗？不想，加班使我快乐！</span><br><span class="line">			你想回家吗？不想，加班使我快乐！</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script&gt;</span><br><span class="line">		window.onload=	function()&#123;</span><br><span class="line">//		获取a原素</span><br><span class="line">				var aclass = document.querySelector(&quot;.a&quot;);</span><br><span class="line">				//定义背景长度</span><br><span class="line">				var progress = 0;</span><br><span class="line">				setInterval(change,100);</span><br><span class="line">				function change()&#123;</span><br><span class="line">					progress ++ ;</span><br><span class="line">					if(progress==100)</span><br><span class="line">					&#123; progress=0;&#125;	</span><br><span class="line">		   aclass.style.backgroundImage</span><br><span class="line">		   =&quot;linear-gradient(to right,  blue &quot; + progress + &quot;%, wheat 0%)&quot;;</span><br><span class="line">&#125;</span><br><span class="line">&#125;&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h2 id="如何图片重叠"><a href="#如何图片重叠" class="headerlink" title="如何图片重叠"></a>如何图片重叠</h2><ul>
+<li>首先将父容器的position 设置为relative;相对布局</li>
+<li>将子容器设置为position: absolute;绝对布局</li>
+<li>子容器通过z-index：3；根据大小可以大的在上面</li>
+<li>opacity: 0.5;设置透明度</li>
 </ul>
 
       
@@ -347,6 +353,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/09/26/易忘的JS用法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          易忘的JS用法 
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/09/19/AJAX学习/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">AJAX学习 </div>
@@ -376,7 +391,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何图片重叠"><span class="toc-number">2.</span> <span class="toc-text">如何图片重叠</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -520,23 +535,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,7 +547,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
