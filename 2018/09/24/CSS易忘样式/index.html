@@ -17,7 +17,7 @@
 <meta property="og:description" content="这笔记主要是为了记录常见的CSS样式，主要是这些样式是很容易忘记的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535777690064&di=22975aa6d3a7e4260af4df4251b26b73&imgtype=0&src=http%3A%2F%2Fit.chinairn.com%2Fuserfiles%2F20170704%2F20170704141924_8821.jpg">
-<meta property="og:updated_time" content="2018-09-27T12:32:35.278Z">
+<meta property="og:updated_time" content="2018-10-02T13:44:32.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS易忘样式 ">
 <meta name="twitter:description" content="这笔记主要是为了记录常见的CSS样式，主要是这些样式是很容易忘记的">
@@ -197,7 +197,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何图片重叠"><span class="toc-number">2.</span> <span class="toc-text">如何图片重叠</span></a></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何图片重叠"><span class="toc-number">2.</span> <span class="toc-text">如何图片重叠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css3的图片阴影box-shadow"><span class="toc-number">3.</span> <span class="toc-text">css3的图片阴影box-shadow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css内容文字居中"><span class="toc-number">4.</span> <span class="toc-text">css内容文字居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内容居中"><span class="toc-number">4.1.</span> <span class="toc-text">内容居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字内容居中"><span class="toc-number">4.2.</span> <span class="toc-text">字内容居中</span></a></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -236,6 +236,32 @@
 <li>子容器通过z-index：3；根据大小可以大的在上面</li>
 <li>opacity: 0.5;设置透明度</li>
 </ul>
+<h2 id="css3的图片阴影box-shadow"><a href="#css3的图片阴影box-shadow" class="headerlink" title="css3的图片阴影box-shadow"></a>css3的图片阴影box-shadow</h2><ul>
+<li>参数介绍<br><strong>box-shadow: 1px 2px 3px 4px #000;</strong><br>解释：1px表示右边有阴影宽度为1px,2px表示下方有阴影宽为2px，<br>3px表示阴影的圆角为3px，4px表示全周阴影为4px,#000表示阴影的颜色<br><strong><em>注意</em></strong><br>当第四参数有时，前面两个会占用第四个值从而达到左上，但值过量阴影偏离。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">box-shadow: -4px 0px 3px 4px #000;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>代码解释：左边阴影为4px，右边为0px,其他为4px,阴影圆角为3px.</p>
+<h2 id="css内容文字居中"><a href="#css内容文字居中" class="headerlink" title="css内容文字居中"></a>css内容文字居中</h2><h3 id="内容居中"><a href="#内容居中" class="headerlink" title="内容居中"></a>内容居中</h3><ul>
+<li>居中根据浏览器来居中（居中本元素宽度中心）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">width: 1200px;</span><br><span class="line">height: 800px;</span><br><span class="line">background-color: #004c88;</span><br><span class="line">margin-left: auto;</span><br><span class="line">margin-right: auto;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释:居中本块元素在浏览器的中间，缺点不能使用外边距。<br>第二种方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position: relative;</span><br><span class="line">left: 0px;</span><br><span class="line">right: 0px;</span><br><span class="line">top: 0px;</span><br><span class="line">bottom: 0px;</span><br><span class="line">margin: auto;</span><br></pre></td></tr></table></figure></p>
+<p>解释：同样可以本内容居中，占浏览器的宽中心（推荐）</p>
+<ul>
+<li>本元素居中（位于父元素的正中心）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">width: 800px;</span><br><span class="line">height: 400px;</span><br><span class="line">position: absolute;</span><br><span class="line">left: 0px;</span><br><span class="line">right: 0px;</span><br><span class="line">top: 0px;</span><br><span class="line">bottom: 0px;</span><br><span class="line">margin: auto;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：这与前面不同这是位于父元素或浏览器的正中心</p>
+<h3 id="字内容居中"><a href="#字内容居中" class="headerlink" title="字内容居中"></a>字内容居中</h3><ul>
+<li>位于一行中的中心<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-align: center;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：将字放在块元素的宽中间</p>
+<ul>
+<li>位于正中心<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">height: 200px;</span><br><span class="line">text-align: center;</span><br><span class="line">line-height: 200px;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>解释：将行高为容器的高度。</p>
 
       
 
@@ -391,7 +417,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何图片重叠"><span class="toc-number">2.</span> <span class="toc-text">如何图片重叠</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一，线性渐变linear-gradient"><span class="toc-number">1.</span> <span class="toc-text">一，线性渐变linear-gradient</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k歌效果案例"><span class="toc-number">1.1.</span> <span class="toc-text">k歌效果案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何图片重叠"><span class="toc-number">2.</span> <span class="toc-text">如何图片重叠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css3的图片阴影box-shadow"><span class="toc-number">3.</span> <span class="toc-text">css3的图片阴影box-shadow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css内容文字居中"><span class="toc-number">4.</span> <span class="toc-text">css内容文字居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内容居中"><span class="toc-number">4.1.</span> <span class="toc-text">内容居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字内容居中"><span class="toc-number">4.2.</span> <span class="toc-text">字内容居中</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -535,15 +561,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,11 +585,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
