@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: 前端 | 梦里北极光的博客</title>
+  <title>浏览器内核 | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="梦里北极光的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梦里北极光的博客">
-<meta property="og:url" content="http://yoursite.com/categories/前端/index.html">
+  <meta name="description" content="本篇文章主要介绍，关于浏览器的一些常见的知识">
+<meta name="keywords" content="学习,前端,流览器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器内核">
+<meta property="og:url" content="http://yoursite.com/2018/10/14/浏览器内核/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
+<meta property="og:description" content="本篇文章主要介绍，关于浏览器的一些常见的知识">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-14T07:48:47.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梦里北极光的博客">
+<meta name="twitter:title" content="浏览器内核">
+<meta name="twitter:description" content="本篇文章主要介绍，关于浏览器的一些常见的知识">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -155,38 +159,128 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="=-浏览器内核" class="article article-type-= " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-=">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/20/Vue-js的学习第一章/" class="archive-article-date">
-  	<time datetime="2018-08-20T01:54:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/20/Vue-js的学习第一章/">Vue.js的学习第一章</a>
+    <h1 class="article-title" itemprop="name">
+      浏览器内核
     </h1>
   
 
 
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2018/10/14/浏览器内核/" class="archive-article-date">
+  	<time datetime="2018-10-14T07:24:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-14</time>
+</a>
+        
+        
+          <span class="archive-article-date">
+            阅读量 <span id="busuanzi_value_page_pv">999+</span>
+          </span>
+      
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+        <span class="btn-bg"></span>
+        <span class="btn-text">文章导航</span>
+        </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器内核的介绍"><span class="toc-number">1.</span> <span class="toc-text">浏览器内核的介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析主流浏览器的内核"><span class="toc-number">2.</span> <span class="toc-text">分析主流浏览器的内核</span></a></li></ol>
+       </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
           
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本篇文章主要介绍，关于浏览器的一些常见的知识<br><a id="more"></a></p>
+</blockquote>
+<h2 id="浏览器内核的介绍"><a href="#浏览器内核的介绍" class="headerlink" title="浏览器内核的介绍"></a>浏览器内核的介绍</h2><p> &nbsp; &nbsp; 浏览器最重要或者说核心的部分是“Rendering Engine”，可大概译为“渲染引擎”，不过我们一般习惯将之称为“浏览器内核”。负责对网页语法的解释（如标准通用标记语言下的一个应用HTML、JavaScript）并渲染（显示）网页。 所以，通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。不同的浏览器内核对网页编写语法的解释也有不同，因此同一网页在不同的内核的浏览器里的渲染（显示）效果也可能不同，这也是网页编写者需要在不同内核的浏览器中测试网页显示效果的原因。</p>
+<h2 id="分析主流浏览器的内核"><a href="#分析主流浏览器的内核" class="headerlink" title="分析主流浏览器的内核"></a>分析主流浏览器的内核</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">浏览器</th>
+<th style="text-align:center">内核</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">firefox</td>
+<td style="text-align:center">Gecko</td>
+</tr>
+<tr>
+<td style="text-align:center">IE</td>
+<td style="text-align:center">Trident</td>
+</tr>
+<tr>
+<td style="text-align:center">chrome</td>
+<td style="text-align:center">Webkit</td>
+</tr>
+<tr>
+<td style="text-align:center">opera</td>
+<td style="text-align:center">Presto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>其他的基本上是双核，多核。</strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>用微信扫一扫奖励我吧(≧∇≦)/<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信收款.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -200,36 +294,141 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">流览器</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/10/14/浏览器内核/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/10/06/PHP的学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP的学习 </div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器内核的介绍"><span class="toc-number">1.</span> <span class="toc-text">浏览器内核的介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析主流浏览器的内核"><span class="toc-number">2.</span> <span class="toc-text">分析主流浏览器的内核</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2018/10/14/浏览器内核/",
+  owner: 'xfbxfbxfb',
+  repo: 'xfbxfbxfb.github.io',
+  oauth: {
+    client_id: '120088d3609163358ead',
+    client_secret: '077afb756d5c43ccbb7ea997aaf376ffbf4b5bd3',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -261,10 +460,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
