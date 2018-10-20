@@ -157,6 +157,108 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="=-template模板引擎的使用" class="article article-type-=  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/18/template模板引擎的使用/">template模板引擎的使用 </a>
+    </h1>
+  
+
+
+
+        
+        <a href="/2018/10/18/template模板引擎的使用/" class="archive-article-date">
+  	<time datetime="2018-10-18T03:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-18</time>
+</a>
+        
+        
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+       
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本篇文章主要介绍template模板引擎的使用</p>
+</blockquote>
+<h2 id="一，template模板引擎的介绍"><a href="#一，template模板引擎的介绍" class="headerlink" title="一，template模板引擎的介绍"></a>一，template模板引擎的介绍</h2><p><a href="https://aui.github.io/art-template/zh-cn/docs/" target="_blank" rel="noopener">点击我查看template基本内容</a></p>
+<h2 id="二，template模板的具体操作方法"><a href="#二，template模板的具体操作方法" class="headerlink" title="二，template模板的具体操作方法"></a>二，template模板的具体操作方法</h2><h3 id="1，一般模板"><a href="#1，一般模板" class="headerlink" title="1，一般模板"></a>1，一般模板</h3><ol>
+<li>导入js插件 <a href="https://unpkg.com/art-template@4.13.1/lib/template-web.js" target="_blank" rel="noopener">插件地址</a></li>
+<li>定义模板(要求script标签里必须有type=”text/html”和id)</li>
+<li>利用template()方法将数据传入到模板<br>例子如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1，导入js插件</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../js/template.js&quot; &gt;&lt;/script&gt;</span><br><span class="line">2. 定义模板(要求script标签里必须有type=&quot;text/html&quot;和id)</span><br><span class="line">&lt;script type=&quot;text/html&quot; id=&quot;resultTemplate&quot;&gt;	</span><br><span class="line">    &lt;!--result是data对象数据下的 value是result的值，i是角标--&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">    &#123;&#123;each result as value i&#125;&#125;</span><br><span class="line">    &lt;li&gt;&lt;span&gt;结果&#123;&#123;i&#125;&#125;：&lt;/span&gt; &lt;span&gt;&#123;&#123;value[0]&#125;&#125;&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">    </span><br><span class="line">    &#123;&#123;/each&#125;&#125;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"> 3. 利用template()方法将数据传入到模板  </span><br><span class="line">var data =&#123;</span><br><span class="line">        </span><br><span class="line">        Isright:true,</span><br><span class="line">        value:[&apos;跑步&apos;,&apos;吉他&apos;,&apos;睡觉&apos;,&apos;打球&apos;],</span><br><span class="line">        kk:&quot;&lt;span style=&apos;color: red;&apos;&gt;这是测试&lt;/span&gt;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">        var html = template(&quot;resultTemplate&quot;,data);</span><br><span class="line">        resultTemplate是模板id,data是要传入模板的数据</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="2-模板的其他的语法"><a href="#2-模板的其他的语法" class="headerlink" title="2, 模板的其他的语法"></a>2, 模板的其他的语法</h3><p><strong>如下例子：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--if判断如果数据data中的Isright是true则进行下一段--&gt;</span><br><span class="line">			&#123;&#123;if Isright&#125;&#125;</span><br><span class="line">			&lt;!--遍历data下的value数组,val为value下的值--&gt;</span><br><span class="line">			&#123;&#123;each value as val i&#125;&#125;</span><br><span class="line">			&lt;ul&gt;</span><br><span class="line">			  &lt;li&gt;&#123;&#123;val&#125;&#125;&lt;/li&gt;</span><br><span class="line">			&lt;/ul&gt;</span><br><span class="line">			&#123;&#123;/each&#125;&#125;</span><br><span class="line">			&#123;&#123;kk&#125;&#125;我是默认转义转为字符串&lt;br&gt;</span><br><span class="line">			&#123;&#123;#kk&#125;&#125;我将转为浏览器能够识别的</span><br><span class="line">			&#123;&#123;/if&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>模板的基本语法如下</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 获取数据中的值&#123;&#123;value&#125;&#125;</span><br><span class="line">2. 循环操作&#123;&#123;each kk as value i&#125;&#125;&#123;&#123;/each&#125;&#125;kk为数据下的数组或其他,value为kk的值，i为kk的角标</span><br><span class="line">3. 转义#  默认转义(字符串形式)&#123;&#123;value&#125;&#125;， 转义&#123;&#123;#value&#125;&#125;转成浏览器能识别的字符</span><br><span class="line">4. 条件判断 &#123;&#123;if xxx&#125;&#125; &#123;&#123;/if&#125;&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">模板引擎</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/18/template模板引擎的使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="=-浏览器内核" class="article article-type-=  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -211,7 +313,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">流览器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
         		</li>
       		
 		</ul>
@@ -535,101 +637,6 @@
 
 
   
-    <article id="=-CSS易忘样式" class="article article-type-=  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/24/CSS易忘样式/">CSS易忘样式 </a>
-    </h1>
-  
-
-
-
-        
-        <a href="/2018/09/24/CSS易忘样式/" class="archive-article-date">
-  	<time datetime="2018-09-24T08:36:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-24</time>
-</a>
-        
-        
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1535777690064&amp;di=22975aa6d3a7e4260af4df4251b26b73&amp;imgtype=0&amp;src=http%3A%2F%2Fit.chinairn.com%2Fuserfiles%2F20170704%2F20170704141924_8821.jpg" alt=""></p>
-<blockquote>
-<p>这笔记主要是为了记录常见的CSS样式，主要是这些样式是很容易忘记的<br>
-        
-          <a class="article-more-a" href="/2018/09/24/CSS易忘样式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/24/CSS易忘样式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -756,11 +763,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -788,11 +795,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">流览器</a>
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -868,7 +879,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://xfbxfbxfb.github.io/Music/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>音乐播放器</a>
             </li>
           
         </ul>
