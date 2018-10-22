@@ -187,18 +187,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>本篇文章主要介绍template模板引擎的使用</p>
-</blockquote>
-<h2 id="一，template模板引擎的介绍"><a href="#一，template模板引擎的介绍" class="headerlink" title="一，template模板引擎的介绍"></a>一，template模板引擎的介绍</h2><p><a href="https://aui.github.io/art-template/zh-cn/docs/" target="_blank" rel="noopener">点击我查看template基本内容</a></p>
-<h2 id="二，template模板的具体操作方法"><a href="#二，template模板的具体操作方法" class="headerlink" title="二，template模板的具体操作方法"></a>二，template模板的具体操作方法</h2><h3 id="1，一般模板"><a href="#1，一般模板" class="headerlink" title="1，一般模板"></a>1，一般模板</h3><ol>
-<li>导入js插件 <a href="https://unpkg.com/art-template@4.13.1/lib/template-web.js" target="_blank" rel="noopener">插件地址</a></li>
-<li>定义模板(要求script标签里必须有type=”text/html”和id)</li>
-<li>利用template()方法将数据传入到模板<br>例子如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">1，导入js插件</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../js/template.js&quot; &gt;&lt;/script&gt;</span><br><span class="line">2. 定义模板(要求script标签里必须有type=&quot;text/html&quot;和id)</span><br><span class="line">&lt;script type=&quot;text/html&quot; id=&quot;resultTemplate&quot;&gt;	</span><br><span class="line">    &lt;!--result是data对象数据下的 value是result的值，i是角标--&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">    &#123;&#123;each result as value i&#125;&#125;</span><br><span class="line">    &lt;li&gt;&lt;span&gt;结果&#123;&#123;i&#125;&#125;：&lt;/span&gt; &lt;span&gt;&#123;&#123;value[0]&#125;&#125;&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">    </span><br><span class="line">    &#123;&#123;/each&#125;&#125;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"> 3. 利用template()方法将数据传入到模板  </span><br><span class="line">var data =&#123;</span><br><span class="line">        </span><br><span class="line">        Isright:true,</span><br><span class="line">        value:[&apos;跑步&apos;,&apos;吉他&apos;,&apos;睡觉&apos;,&apos;打球&apos;],</span><br><span class="line">        kk:&quot;&lt;span style=&apos;color: red;&apos;&gt;这是测试&lt;/span&gt;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">        var html = template(&quot;resultTemplate&quot;,data);</span><br><span class="line">        resultTemplate是模板id,data是要传入模板的数据</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="2-模板的其他的语法"><a href="#2-模板的其他的语法" class="headerlink" title="2, 模板的其他的语法"></a>2, 模板的其他的语法</h3><p><strong>如下例子：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--if判断如果数据data中的Isright是true则进行下一段--&gt;</span><br><span class="line">			&#123;&#123;if Isright&#125;&#125;</span><br><span class="line">			&lt;!--遍历data下的value数组,val为value下的值--&gt;</span><br><span class="line">			&#123;&#123;each value as val i&#125;&#125;</span><br><span class="line">			&lt;ul&gt;</span><br><span class="line">			  &lt;li&gt;&#123;&#123;val&#125;&#125;&lt;/li&gt;</span><br><span class="line">			&lt;/ul&gt;</span><br><span class="line">			&#123;&#123;/each&#125;&#125;</span><br><span class="line">			&#123;&#123;kk&#125;&#125;我是默认转义转为字符串&lt;br&gt;</span><br><span class="line">			&#123;&#123;#kk&#125;&#125;我将转为浏览器能够识别的</span><br><span class="line">			&#123;&#123;/if&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>模板的基本语法如下</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 获取数据中的值&#123;&#123;value&#125;&#125;</span><br><span class="line">2. 循环操作&#123;&#123;each kk as value i&#125;&#125;&#123;&#123;/each&#125;&#125;kk为数据下的数组或其他,value为kk的值，i为kk的角标</span><br><span class="line">3. 转义#  默认转义(字符串形式)&#123;&#123;value&#125;&#125;， 转义&#123;&#123;#value&#125;&#125;转成浏览器能识别的字符</span><br><span class="line">4. 条件判断 &#123;&#123;if xxx&#125;&#125; &#123;&#123;/if&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>本篇文章主要介绍template模板引擎的使用<br>
+        
+          <a class="article-more-a" href="/2018/10/18/template模板引擎的使用/#more">more >></a>
+        
       
 
       
@@ -743,15 +735,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -763,7 +755,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -771,19 +763,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -795,15 +783,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
