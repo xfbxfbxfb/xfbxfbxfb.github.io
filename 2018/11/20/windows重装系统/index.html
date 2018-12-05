@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本片文章主要写了关于windows系统的重装的问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-25T13:51:06.529Z">
+<meta property="og:updated_time" content="2018-12-04T02:46:51.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows重装系统">
 <meta name="twitter:description" content="本片文章主要写了关于windows系统的重装的问题">
@@ -44,7 +44,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #35a4e2"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -103,7 +103,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #35a4e2"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -228,7 +228,9 @@
 <h2 id="重装系统的准备"><a href="#重装系统的准备" class="headerlink" title="重装系统的准备"></a>重装系统的准备</h2><p>介绍：我一般是用u盘重装系统，将大白菜，老毛桃，u大师等等制作u盘。<br>然后在MSDN微软的官方系统下载镜像</p>
 <h3 id="bios的设置"><a href="#bios的设置" class="headerlink" title="bios的设置"></a>bios的设置</h3><ol>
 <li>首先进入bios页面进行设置</li>
-<li>查看CSM boot 是否为Enabled<br>如果不是则将到security 将secure boot control 设置为disabled</li>
+<li>查看CSM boot 是否为Enabled<br>如果不是则将到security 将secure boot control 设置为disabled<br>目的：是为了能让电脑检测到u盘,</li>
+<li>再将u盘设置为第一启动。</li>
+<li>重启，进入U盘启动。<br><strong>还一种方法</strong><br>使用微软自带的启动，将下载的镜像解压，启动里面的steup，或者将镜像刻录到U盘只要一开机就能启动。<br><strong>本人比较推荐用第一种方法</strong></li>
 </ol>
 <h2 id="重装系统时出现问题"><a href="#重装系统时出现问题" class="headerlink" title="重装系统时出现问题"></a>重装系统时出现问题</h2><ol>
 <li>reboot and select proper boot device r Insert boot Media in selshected boot device and press a key<br>开机出现这种情况，说是重新启动选择合适的设备<br>解决办法：把第一启动的选项设置为你安装的系统硬盘(我是把启动时的硬盘在bios找到作为第一启动)</li>
@@ -519,10 +521,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -535,11 +533,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
