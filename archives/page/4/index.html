@@ -6,20 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Jquery | 梦里北极光的博客</title>
+  <title>Archives | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="将写代码时碰到的难题在百度找的方法记录在此">
-<meta name="keywords" content="学习,前端,jquery">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Jquery">
-<meta property="og:url" content="http://yoursite.com/2018/09/18/Jquery易忘知识/index.html">
+  <meta name="keywords" content="梦里北极光的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="梦里北极光的博客">
+<meta property="og:url" content="http://yoursite.com/archives/page/4/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
-<meta property="og:description" content="将写代码时碰到的难题在百度找的方法记录在此">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-08T03:21:52.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jquery">
-<meta name="twitter:description" content="将写代码时碰到的难题在百度找的方法记录在此">
+<meta name="twitter:title" content="梦里北极光的博客">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -171,238 +167,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="=-Jquery易忘知识" class="article article-type-= " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Jquery
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/08/12/hello-world/" class="archive-article-date">
+  	<time datetime="2018-08-12T07:36:38.600Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/08/12/hello-world/">Hello World</a>
     </h1>
   
 
 
 
-        
-        <a href="/2018/09/18/Jquery易忘知识/" class="archive-article-date">
-  	<time datetime="2018-09-18T01:53:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
-</a>
-        
-        
-          <span class="archive-article-date">
-            阅读量 <span id="busuanzi_value_page_pv">999+</span>
-          </span>
-      
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
+        <div class="article-info info-on-right">
+          
+          
 
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>将写代码时碰到的难题在百度找的方法记录在此<br><a id="more"></a></p>
-</blockquote>
-<h2 id="Jquery中valitate的使用"><a href="#Jquery中valitate的使用" class="headerlink" title="Jquery中valitate的使用"></a>Jquery中valitate的使用</h2><p><a href="https://www.jb51.net/article/107581.htm" target="_blank" rel="noopener">原文链接</a></p>
-<h2 id="Jq中时间格式化"><a href="#Jq中时间格式化" class="headerlink" title="Jq中时间格式化"></a>Jq中时间格式化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">时间格式化</span><br><span class="line">Date.prototype.Format = function (fmt) &#123; //author: meizz</span><br><span class="line">  var o = &#123;</span><br><span class="line">    &quot;M+&quot;: this.getMonth() + 1, //月份</span><br><span class="line">    &quot;d+&quot;: this.getDate(), //日</span><br><span class="line">    &quot;h+&quot;: this.getHours(), //小时</span><br><span class="line">    &quot;m+&quot;: this.getMinutes(), //分</span><br><span class="line">    &quot;s+&quot;: this.getSeconds(), //秒</span><br><span class="line">    &quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3), //季度</span><br><span class="line">    &quot;S&quot;: this.getMilliseconds() //毫秒</span><br><span class="line">  &#125;;</span><br><span class="line">  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + &quot;&quot;).substr(4 - RegExp.$1.length));</span><br><span class="line">  for (var k in o)</span><br><span class="line">  if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : ((&quot;00&quot; + o[k]).substr((&quot;&quot; + o[k]).length)));</span><br><span class="line">  return fmt;</span><br><span class="line">&#125;</span><br><span class="line">$(function()&#123;</span><br><span class="line">  var date=new Date();</span><br><span class="line">  &lt;!-- 格式可改变 --&gt;</span><br><span class="line">  alert(JSON.stringify(date.Format(&quot;yyyy年MM月dd hh:mm:ss&quot;)));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>代码输出当前的年月日时分。</p>
-<h2 id="表格的增加列与删除"><a href="#表格的增加列与删除" class="headerlink" title="表格的增加列与删除"></a>表格的增加列与删除</h2><h3 id="列增加但dom有增加"><a href="#列增加但dom有增加" class="headerlink" title="列增加但dom有增加"></a>列增加但dom有增加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var del = &quot;&lt;a class=&apos;del&apos;&gt;删除&lt;/a&gt;&quot;;</span><br><span class="line">var tr = &quot;&lt;tr&gt;&quot; + &quot;&lt;td&gt;&quot; + name + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + describle + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + time + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + del + &quot;&lt;/td&gt;&quot; + &quot;&lt;/tr&gt;&quot;;</span><br><span class="line">$(&quot;#tbody&quot;).append(tr);</span><br></pre></td></tr></table></figure>
-<p>解释：html能看到显示但在源码没有</p>
-<h3 id="列增加源码也增加"><a href="#列增加源码也增加" class="headerlink" title="列增加源码也增加"></a>列增加源码也增加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//添加方法</span><br><span class="line">$(&quot;#add&quot;).bind(&quot;click&quot;,function()&#123;</span><br><span class="line">    var del = &quot;&lt;a class=&apos;del&apos;&gt;删除&lt;/a&gt;&quot;;</span><br><span class="line">var tr = &quot;&lt;tr&gt;&quot; + &quot;&lt;td&gt;&quot; + name + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + describle + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + time + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + del + &quot;&lt;/td&gt;&quot; + &quot;&lt;/tr&gt;&quot;;</span><br><span class="line">$(&quot;#tbody&quot;).append(tr);</span><br></pre></td></tr></table></figure>
-<p>解释：源码里有，页面也能看的到</p>
-<h3 id="动态删除"><a href="#动态删除" class="headerlink" title="动态删除"></a>动态删除</h3><ul>
-<li>此方法适用于用jq添加的元素删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#tbody&quot;).on(&quot;click&quot;, &quot;.del&quot;, function() &#123;</span><br><span class="line">    //获取此元素父容器</span><br><span class="line">    var aindex= $(this).parents(&quot;tr&quot;);</span><br><span class="line">    aindex.remove();</span><br><span class="line">    //直接删除此容器</span><br><span class="line">    //$(this).remove();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>解释：此方法可以删除jq添加的元素有的。</p>
-<h3 id="静态删除"><a href="#静态删除" class="headerlink" title="静态删除"></a>静态删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">$(&quot;tbody a&quot;).click(function()&#123;</span><br><span class="line">    var aindex= $(this).parents(&quot;tr&quot;);</span><br><span class="line">aindex.remove();	</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>解释：此方法只能删除原来html里有的元素，不能删除jq增加的元素。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>用钱砸我吧(≧∇≦)/<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/支付宝收款.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/微信收款.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jquery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/09/18/Jquery易忘知识/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/09/19/AJAX学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          AJAX学习 
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/09/02/关于文件上传到github问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于文件上传到github问题 </div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2018/09/18/Jquery易忘知识/",
-  owner: 'xfbxfbxfb',
-  repo: 'xfbxfbxfb.github.io',
-  oauth: {
-    client_id: '120088d3609163358ead',
-    client_secret: '077afb756d5c43ccbb7ea997aaf376ffbf4b5bd3',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
   
 
 
@@ -435,8 +247,8 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
