@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解如何操作一些网络技术以及他们的操作步骤,一些关于网络的小实验步骤。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T14:41:48.048Z">
+<meta property="og:updated_time" content="2019-01-16T14:35:23.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术操作方法 ">
 <meta name="twitter:description" content="本章主要讲解如何操作一些网络技术以及他们的操作步骤,一些关于网络的小实验步骤。">
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.0.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.0.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由实验"><span class="toc-number">1.1.</span> <span class="toc-text">路由实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程配置路由"><span class="toc-number">1.1.1.</span> <span class="toc-text">远程配置路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态路由"><span class="toc-number">1.1.2.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.1.3.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">RIP</span></a></li></ol></li></ol></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -240,6 +240,21 @@
 <li><p>测试<br>用掌控者的电脑ping被控者的电脑是否能连接</p>
 </li>
 </ol>
+<h2 id="路由实验"><a href="#路由实验" class="headerlink" title="路由实验"></a>路由实验</h2><h3 id="远程配置路由"><a href="#远程配置路由" class="headerlink" title="远程配置路由"></a>远程配置路由</h3><ol>
+<li>在远程的PC端进行联网连接<br>PC&gt;telnet 192.168.1.0(路由ip)<br>….<br>输入远程路由登录的密码(路由终端设置的VTY密码)<br>Password:   </li>
+</ol>
+<p><font color="red">进入远程路由控制平台</font><br>Rount&gt;en(进入特权模式)<br>Rount#conf t(进入全局配置模式)</p>
+<h3 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h3><ol>
+<li><p>静态路由的写法<br>Route(config)#ip route (目的接口ip) (子网掩码) (下一跳接口)</p>
+</li>
+<li><p>删除某条路由条目<br>Route(config)#no ip route (目的接口ip) (子网掩码) (下一跳接口)</p>
+</li>
+</ol>
+<p>实验遇到的问题：<br>到达目的ip,如果这条路上还有路由或还有其他网关则还需导通，增加路由条目</p>
+<ol start="3">
+<li>默认路由(缺省路由)<br>Route(config)#ip route 0.0.0.0 0.0.0.0 192.168.1.2<br>解释：可以连接任何一条路由条目，192.168.1.2是局域网</li>
+</ol>
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><h4 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h4><p>当配好了RIP协议后查看路由表出现<br><strong>如：172.16.1.0 [120/2] via 172.16.3.2, 00:00:06, Serial2/0</strong><br>120是可信度 2是度量值</p>
 
       
 
@@ -400,7 +415,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.0.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.0.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由实验"><span class="toc-number">1.1.</span> <span class="toc-text">路由实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程配置路由"><span class="toc-number">1.1.1.</span> <span class="toc-text">远程配置路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态路由"><span class="toc-number">1.1.2.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.1.3.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">RIP</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -537,10 +552,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -553,15 +564,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -577,19 +592,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异常</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,15 +608,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
               <li class="article-tag-list-item">

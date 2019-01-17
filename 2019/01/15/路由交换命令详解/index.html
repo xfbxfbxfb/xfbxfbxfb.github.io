@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解路由交换的命令及命令的作用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-15T14:49:49.230Z">
+<meta property="og:updated_time" content="2019-01-16T15:24:04.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="路由交换命令详解 ">
 <meta name="twitter:description" content="本章主要讲解路由交换的命令及命令的作用">
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.4.</span> <span class="toc-text">动态路由</span></a></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -240,7 +240,7 @@
 <li>(当只记得前面一部分后面有很多重复的)可用输入前面的一部分然后加？，如Router&gt;e?</li>
 <li>(自动补全)即前面的一部分记得，后面就差几个，你可输入前面一部分按Tab键进入补全</li>
 </ul>
-<h3 id="路由进入特权模式"><a href="#路由进入特权模式" class="headerlink" title="路由进入特权模式"></a>路由进入特权模式</h3><p><strong>1，Router&gt;enable</strong></p>
+<h3 id="路由进入特权模式"><a href="#路由进入特权模式" class="headerlink" title="路由进入特权模式"></a>路由进入特权模式</h3><p><strong>1，Router&gt;enable</strong><br><strong>在配置的模式下ctrl+z直接进入特权模式下输出命令为^Z</strong></p>
 <font color="red">Router#</font>
 
 <table>
@@ -276,16 +276,17 @@
 <td style="text-align:center">copy running-config startup-config</td>
 </tr>
 <tr>
-<td style="text-align:center">查看当前配置</td>
+<td style="text-align:center">查看正在运行配置</td>
 <td style="text-align:center">show running-config</td>
 </tr>
 <tr>
-<td style="text-align:center">查看当前配置</td>
+<td style="text-align:center">查看启动时配置</td>
 <td style="text-align:center">show startup-config</td>
 </tr>
 </tbody>
 </table>
-<h3 id="路由进入全局配置模式"><a href="#路由进入全局配置模式" class="headerlink" title="路由进入全局配置模式"></a>路由进入全局配置模式</h3><font color="blue">所有路由的配置，如IP，密码，连接等等</font>
+<h3 id="路由进入全局配置模式"><a href="#路由进入全局配置模式" class="headerlink" title="路由进入全局配置模式"></a>路由进入全局配置模式</h3><p>config t和configure</p>
+<font color="blue">所有路由的配置，如IP，密码，连接等等</font>
 
 <font color="red">Router(config)#以下用X</font>
 
@@ -344,6 +345,33 @@
 <tr>
 <td style="text-align:center">配置串口Ip地址和子网掩码</td>
 <td style="text-align:center">Router(config-if)#ip address 地址 子网</td>
+</tr>
+<tr>
+<td style="text-align:center">更改配置寄存器的值</td>
+<td style="text-align:center">X config-register 值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><p>进入全局配置模式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令的作用</th>
+<th style="text-align:center">命令的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">在路由器上启用RIP</td>
+<td style="text-align:center">Router(config)#router rip</td>
+</tr>
+<tr>
+<td style="text-align:center">RIP协议工作的端口</td>
+<td style="text-align:center">Router(config-router)#network 172.16.0.0(端口)</td>
+</tr>
+<tr>
+<td style="text-align:center">使用第二版的RIP协议</td>
+<td style="text-align:center">Router(config-router)#version 2</td>
 </tr>
 </tbody>
 </table>
@@ -498,7 +526,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.4.</span> <span class="toc-text">动态路由</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -635,10 +663,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -651,15 +675,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -675,19 +703,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异常</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -699,15 +719,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
               <li class="article-tag-list-item">
