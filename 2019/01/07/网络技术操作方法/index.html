@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解如何操作一些网络技术以及他们的操作步骤,一些关于网络的小实验步骤。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T14:35:23.989Z">
+<meta property="og:updated_time" content="2019-01-21T14:59:38.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术操作方法 ">
 <meta name="twitter:description" content="本章主要讲解如何操作一些网络技术以及他们的操作步骤,一些关于网络的小实验步骤。">
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.0.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由实验"><span class="toc-number">1.1.</span> <span class="toc-text">路由实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程配置路由"><span class="toc-number">1.1.1.</span> <span class="toc-text">远程配置路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态路由"><span class="toc-number">1.1.2.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.1.3.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">RIP</span></a></li></ol></li></ol></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ciscol命令手册"><span class="toc-number">1.1.</span> <span class="toc-text">ciscol命令手册</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.1.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由实验"><span class="toc-number">1.2.</span> <span class="toc-text">路由实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程配置路由"><span class="toc-number">1.2.1.</span> <span class="toc-text">远程配置路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态路由"><span class="toc-number">1.2.2.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.2.3.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">RIP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广域网"><span class="toc-number">1.2.4.</span> <span class="toc-text">广域网</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置PPP封装和PAP认证"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">配置PPP封装和PAP认证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PPP封装CHAP验证"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">PPP封装CHAP验证</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ACL"><span class="toc-number">1.2.5.</span> <span class="toc-text">ACL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ACL简介"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">ACL简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ACL匹配规则"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">ACL匹配规则</span></a></li></ol></li></ol></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -231,7 +231,7 @@
         <blockquote>
 <p>本章主要讲解如何操作一些网络技术以及他们的操作步骤,一些关于网络的小实验步骤。<br><a id="more"></a></p>
 </blockquote>
-<h1 id="网络技术操作方法"><a href="#网络技术操作方法" class="headerlink" title="网络技术操作方法"></a>网络技术操作方法</h1><p>## </p>
+<h1 id="网络技术操作方法"><a href="#网络技术操作方法" class="headerlink" title="网络技术操作方法"></a>网络技术操作方法</h1><h2 id="ciscol命令手册"><a href="#ciscol命令手册" class="headerlink" title="ciscol命令手册"></a>ciscol命令手册</h2><p>1,<a href="https://blog.csdn.net/qq_22708467/article/details/52964277" target="_blank" rel="noopener">命令手册参考</a><br>2,[]</p>
 <h3 id="远程桌面控制"><a href="#远程桌面控制" class="headerlink" title="远程桌面控制"></a>远程桌面控制</h3><ol>
 <li><p>掌控者<br>在本电脑的附件找到远程控制桌面</p>
 </li>
@@ -255,6 +255,27 @@
 <li>默认路由(缺省路由)<br>Route(config)#ip route 0.0.0.0 0.0.0.0 192.168.1.2<br>解释：可以连接任何一条路由条目，192.168.1.2是局域网</li>
 </ol>
 <h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><h4 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h4><p>当配好了RIP协议后查看路由表出现<br><strong>如：172.16.1.0 [120/2] via 172.16.3.2, 00:00:06, Serial2/0</strong><br>120是可信度 2是度量值</p>
+<h3 id="广域网"><a href="#广域网" class="headerlink" title="广域网"></a>广域网</h3><h4 id="配置PPP封装和PAP认证"><a href="#配置PPP封装和PAP认证" class="headerlink" title="配置PPP封装和PAP认证"></a>配置PPP封装和PAP认证</h4><p><strong>配置PPP封装,PAP认证:</strong><br>R1(config)#int s0/0/0<br>R1(config-if)#encapsulation ppp<br>R1(config-if)#ppp authentication pap<br>R2(config)#int s0/0/0<br>R2(config-if)#encapsulation ppp         <strong><em>//使用封装</em></strong><br>R2(config-if)#ppp authentication pap  <strong><em>//激活验证方法pap</em></strong><br>R2验证R1:<br>R2(config)#username R1 password 123456  <strong><em>//配置认证的用户R1与密码</em></strong><br>R1(config-if)#ppp pap sent-username R1 password 123456 <strong><em>//R1输入密码进行连接</em></strong><br>R1验证R2:<br>R1(config)#username R2 password 654321<br>R2(config-if)#ppp pap sent-username R2 password 654321</p>
+<h4 id="PPP封装CHAP验证"><a href="#PPP封装CHAP验证" class="headerlink" title="PPP封装CHAP验证"></a>PPP封装CHAP验证</h4><p><strong>配置PPP封装，CHAP验证:</strong><br>R1(config)#int s0/0/0<br>R1(config-if)#encapsulation ppp<br>R1(config-if)#ppp authentication chap<br>R2(config)#int s0/0/0<br>R2(config-if)#encapsulation ppp<br>R2(config-if)#ppp authentication chap</p>
+<p>R1(config)#username R2 password hello <strong><em>//连接R2的密码</em></strong><br>R2(config)#username R1 password hello<br>注:为对方配置用户名和密码，需要注意的是两方的密码要相同</p>
+<h3 id="ACL"><a href="#ACL" class="headerlink" title="ACL"></a>ACL</h3><h4 id="ACL简介"><a href="#ACL简介" class="headerlink" title="ACL简介"></a>ACL简介</h4><p><strong>访问控制列表ACL（Access Control List）</strong>是由一系列规则组成的集合，ACL通过这些规则对报文进行分类，从而使设备可以对不同类报文进行不同的处理<br><strong>自我理解：</strong>ACL其实是一种报文过滤器，ACL规则就是过滤器的滤芯。安装什么样的滤芯（即根据报文特征配置相应的ACL规则），ACL就能过滤出什么样的报文了。</p>
+<h4 id="ACL匹配规则"><a href="#ACL匹配规则" class="headerlink" title="ACL匹配规则"></a>ACL匹配规则</h4><p>报文到达设备时，设备从报文中提取信息，并将该信息与ACL中的规则进行匹配，只要有一条规则和报文匹配，就停止查找，称为命中规则。查找完所有规则，如果没有符合条件的规则，称为未命中规则。<br>ACL的规则分为“permit”（允许）规则和“deny”（拒绝）规则和未命中规则。</p>
+<ul>
+<li>简单的访问控制列表<br>在配置前应配置所有网段,默认拒绝所有<br>access-list 10 permit any<br>Any=0.0.0.0 255.255.255.255 任何一个地址都满足<br>1,禁止规则<br>Router(config)#access-list 10 deny 192.168.2.2 0.0.0.0 //禁止此地址通过</li>
+</ul>
+<p>2,允许规则<br>Router(config)#access-list 10 permit 192.168.2.0 0.0.0.255 //允许此网关通过</p>
+<p>3,对接口进行绑定<br>Router(config)#interface serial 3/0 //绑定接口<br>Router(config-if)#ip access-group 10 out ///将访问控制列表10绑定到 S3/0 出口</p>
+<ul>
+<li>查看访问控制列表<br>Router#show access-lists</li>
+<li><p>ACL实验一<br>1,此实验将对远程控制路由进行限制。<br>控制pc端只准ip为192.168.1.3进入<br>步骤：<br>1，初始化VTY端口<br>Router(config)#line vty 0 4<br>2，配置VTY端口密码<br>Router(config-line)#password aaa<br>3，定义访问控制列表<br>Router(config)#access-list 20 permit 192.168.1.3 0.0.0.0<br>4，将列表绑定到VTY端口<br>Router(config-line)#access-class 20 in<font color="red">数据在里面过滤</font><br><font color="red">数据在出去时过滤</font><br>5,查看访问控制列表<br>Router#show access-lists<br>6,测试pc进入路由配置</p>
+</li>
+<li><p>ACL实验二<br>主要是目的可以进入WEB但不能ping<br>1,控制列表<br>Router(config)#access-list 101 permit tcp 192.168.2.0 0.0.0.255 host 10.0.0.2 eq 80<br><strong>自我理解：</strong>允许网关为192.168.2.0通过TCP协议在服务器10.0.0.2端口80上网</p>
+</li>
+</ul>
+<p>Router(config)#access-list 101 deny icmp 192.168.2.0 0.0.0.255 10.0.0.0 0.255.255.255<br><strong>自我理解：</strong>禁止网关192.168.2.0 ping网关10.0.0.0 </p>
+<p>Router(config)#access-list 101 deny ip 192.168.2.0 0.0.0.255 host 10.0.0.3<br><strong>自我理解：</strong>禁止网关192.168.2.0与10.0.0.3所有通信</p>
+<p>Router(config)#access-list 101 permit ip 192.168.2.0 0.0.0.255 192.168.0.0 0.0.0.255<br><strong>自我理解：</strong>允许网关192.168.2.0 与192.168.0.0所有通信</p>
+<p><font color="red">IP代表所有通讯包括通讯TCP或UDP和ICMP </font><br>2，绑定端口<br>Router(config)#interface f2/0<br>Router(config-if)#ip access-group 101 in</p>
 
       
 
@@ -415,7 +436,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.0.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由实验"><span class="toc-number">1.1.</span> <span class="toc-text">路由实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程配置路由"><span class="toc-number">1.1.1.</span> <span class="toc-text">远程配置路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态路由"><span class="toc-number">1.1.2.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.1.3.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">RIP</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网络技术操作方法"><span class="toc-number">1.</span> <span class="toc-text">网络技术操作方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ciscol命令手册"><span class="toc-number">1.1.</span> <span class="toc-text">ciscol命令手册</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程桌面控制"><span class="toc-number">1.1.1.</span> <span class="toc-text">远程桌面控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由实验"><span class="toc-number">1.2.</span> <span class="toc-text">路由实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程配置路由"><span class="toc-number">1.2.1.</span> <span class="toc-text">远程配置路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态路由"><span class="toc-number">1.2.2.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.2.3.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">RIP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广域网"><span class="toc-number">1.2.4.</span> <span class="toc-text">广域网</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置PPP封装和PAP认证"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">配置PPP封装和PAP认证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PPP封装CHAP验证"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">PPP封装CHAP验证</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ACL"><span class="toc-number">1.2.5.</span> <span class="toc-text">ACL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ACL简介"><span class="toc-number">1.2.5.1.</span> <span class="toc-text">ACL简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ACL匹配规则"><span class="toc-number">1.2.5.2.</span> <span class="toc-text">ACL匹配规则</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -560,19 +581,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -584,39 +597,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -625,6 +618,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
               </li>
              
               <li class="article-tag-list-item">

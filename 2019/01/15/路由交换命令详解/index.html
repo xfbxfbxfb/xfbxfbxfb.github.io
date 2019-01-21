@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解路由交换的命令及命令的作用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T15:24:04.313Z">
+<meta property="og:updated_time" content="2019-01-20T14:50:17.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="路由交换命令详解 ">
 <meta name="twitter:description" content="本章主要讲解路由交换的命令及命令的作用">
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.4.</span> <span class="toc-text">动态路由</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.4.</span> <span class="toc-text">动态路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#交换机配置命令"><span class="toc-number">2.</span> <span class="toc-text">交换机配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置VLAN"><span class="toc-number">2.1.</span> <span class="toc-text">配置VLAN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看交换机的MAC地址表"><span class="toc-number">2.2.</span> <span class="toc-text">查看交换机的MAC地址表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置VTP域"><span class="toc-number">2.3.</span> <span class="toc-text">配置VTP域</span></a></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -283,6 +283,10 @@
 <td style="text-align:center">查看启动时配置</td>
 <td style="text-align:center">show startup-config</td>
 </tr>
+<tr>
+<td style="text-align:center">显示路由最佳和备用路径</td>
+<td style="text-align:center">show ip eigrp topology</td>
+</tr>
 </tbody>
 </table>
 <h3 id="路由进入全局配置模式"><a href="#路由进入全局配置模式" class="headerlink" title="路由进入全局配置模式"></a>路由进入全局配置模式</h3><p>config t和configure</p>
@@ -353,6 +357,8 @@
 </tbody>
 </table>
 <h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><p>进入全局配置模式</p>
+<font color="red">rip协议配置</font>
+
 <table>
 <thead>
 <tr>
@@ -375,6 +381,72 @@
 </tr>
 </tbody>
 </table>
+<font color="red">EIGRP协议配置</font>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令的作用</th>
+<th style="text-align:center">命令的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">在路由器上启用eigrp</td>
+<td style="text-align:center">Router(config)#route eigrp 10</td>
+</tr>
+<tr>
+<td style="text-align:center">EIGRP协议工作的端口</td>
+<td style="text-align:center">Router(config-router)#network 192.168.0.0.(端口)</td>
+</tr>
+<tr>
+<td style="text-align:center">路由器上显示EIGRP接口</td>
+<td style="text-align:center">Router#show ip eigrp interfaces</td>
+</tr>
+</tbody>
+</table>
+<p>192.168.3.0/24 [90/21024000] via 192.168.2.2, 00:08:30, Serial2/0<br>管理距离为90度量值为21024000</p>
+<font color="red">OSPF协议配置</font>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令的作用</th>
+<th style="text-align:center">命令的代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">路由器上启用ospf</td>
+<td style="text-align:center">Router(config)#route ospf 1</td>
+</tr>
+<tr>
+<td style="text-align:center">OSPF协议工作的端口</td>
+<td style="text-align:center">Router(config-router)#network 目标网络 匹配符(反掩码) Area 区域号</td>
+</tr>
+<tr>
+<td style="text-align:center">查看OSPF邻居</td>
+<td style="text-align:center">Router#show ip ospf neighbor</td>
+</tr>
+<tr>
+<td style="text-align:center">查看OSPF数据</td>
+<td style="text-align:center">Router#show ip ospf database</td>
+</tr>
+</tbody>
+</table>
+<h2 id="交换机配置命令"><a href="#交换机配置命令" class="headerlink" title="交换机配置命令"></a>交换机配置命令</h2><h3 id="配置VLAN"><a href="#配置VLAN" class="headerlink" title="配置VLAN"></a>配置VLAN</h3><ol>
+<li><p>查看所有VLAN所在端口<br>Switch#show vlan </p>
+</li>
+<li><p>创建/删除VLAN1<br>创建<br>Switch(config)#valn 1<br>删除<br>Switch(config)#no vlan 1</p>
+</li>
+<li>将端口Fa0/2-5指定到vlan 1<br>Switch(config)#interface range fastEthernet 0/2-5(选定端口0/2到0/5)<br>Switch(config-if-range)#switchport access vlan 1 (将这些端口放入vlan 1)</li>
+</ol>
+<h3 id="查看交换机的MAC地址表"><a href="#查看交换机的MAC地址表" class="headerlink" title="查看交换机的MAC地址表"></a>查看交换机的MAC地址表</h3><p>1，查看MAC地址表<br>Switch#show mac-address-table</p>
+<h3 id="配置VTP域"><a href="#配置VTP域" class="headerlink" title="配置VTP域"></a>配置VTP域</h3><ol>
+<li>配置VTP域名<br>Switch(config)#vtp domain 域名</li>
+<li>配置VTP密码<br>Switch(config)#vtp password 密码</li>
+<li>设置VTP模式<br>Switch(config)#vtp mode client/server</li>
+</ol>
 
       
 
@@ -526,7 +598,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.4.</span> <span class="toc-text">动态路由</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由配置命令"><span class="toc-number">1.</span> <span class="toc-text">路由配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由常用提示的命令"><span class="toc-number">1.1.</span> <span class="toc-text">路由常用提示的命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入特权模式"><span class="toc-number">1.2.</span> <span class="toc-text">路由进入特权模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#路由进入全局配置模式"><span class="toc-number">1.3.</span> <span class="toc-text">路由进入全局配置模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态路由"><span class="toc-number">1.4.</span> <span class="toc-text">动态路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#交换机配置命令"><span class="toc-number">2.</span> <span class="toc-text">交换机配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置VLAN"><span class="toc-number">2.1.</span> <span class="toc-text">配置VLAN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看交换机的MAC地址表"><span class="toc-number">2.2.</span> <span class="toc-text">查看交换机的MAC地址表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置VTP域"><span class="toc-number">2.3.</span> <span class="toc-text">配置VTP域</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -671,19 +743,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -695,39 +759,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -736,6 +780,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
               </li>
              
               <li class="article-tag-list-item">

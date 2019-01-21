@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="对于网络现在一点都不懂，必须要重头开始一点一点的积累，CCNA思科认证是最初期的上班才发现自己什么都不懂，趁着现在只想学习，全力以赴。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-16T15:23:52.935Z">
+<meta property="og:updated_time" content="2019-01-17T02:29:28.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络技术学习 ">
 <meta name="twitter:description" content="对于网络现在一点都不懂，必须要重头开始一点一点的积累，CCNA思科认证是最初期的上班才发现自己什么都不懂，趁着现在只想学习，全力以赴。">
@@ -485,7 +485,49 @@
 </tr>
 </tbody>
 </table>
-<p>|</p>
+<p><strong>路由协议的优先级</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">优先级排序</th>
+<th style="text-align:center">路由协议类型</th>
+<th style="text-align:center">默认AD值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">连接接口</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">静态路由</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">EIGRP</td>
+<td style="text-align:center">90</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">IGRP</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">OSPF</td>
+<td style="text-align:center">110</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">RIP</td>
+<td style="text-align:center">120</td>
+</tr>
+</tbody>
+</table>
+<p><font color="red">注意:</font>255这条路由永远不会被使用</p>
 <h3 id="八，交换机"><a href="#八，交换机" class="headerlink" title="八，交换机"></a>八，交换机</h3><h4 id="VLAN详解"><a href="#VLAN详解" class="headerlink" title="VLAN详解"></a>VLAN详解</h4><ol>
 <li>什么是VLAN?<br>划分物理以太网产生的的每一个广播域等同于一个逻辑上独立的以太网，由于这些逻辑上独立的以太网存在于同一个<br>物理以太网中，因而被称为虚拟局域网</li>
 </ol>
@@ -798,19 +840,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -822,39 +856,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -863,6 +877,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bootstrop</a>
               </li>
              
               <li class="article-tag-list-item">
