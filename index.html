@@ -169,6 +169,109 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网络技术易忘题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/12/网络技术易忘题/">网络技术易忘题</a>
+    </h1>
+  
+
+
+
+        
+        <a href="/2019/02/12/网络技术易忘题/" class="archive-article-date">
+  	<time datetime="2019-02-12T03:41:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
+</a>
+        
+        
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+       
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本章主要记录在学习过程中，一些难理解，和一些自己容易忘记的知识点和题目。</p>
+</blockquote>
+<h2 id="IP地址中的题"><a href="#IP地址中的题" class="headerlink" title="IP地址中的题"></a>IP地址中的题</h2><h3 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h3><ol>
+<li><p>172.16.0.0  255.255.0.0写出网络地址，广播地址，可用主机地址。<br>网络地址：172.16.0.0<br>主机位全为0<br>广播地址：172.16.255.255<br>主机位全为1<br>可用地址：172.16.0.1~172.16.255.254<br>除了网络和广播</p>
+</li>
+<li><p>知道IP地址和子网掩码如何计算网络地址和广播地址<br>如：知道IP地址11.1.1.1 255.255.0.0<br><strong>计算网络地址方法：</strong><br>将IP地址和子网掩码转化成二进制。<br>进行与运算。<br>所得即为网络地址。<br>11.1.1.1 与255.255.0.0进行与运算<br>11.1.0000 0001.0000 0001<br>255.255.0.0<br>得网络地址为：11.1.0.0<br>则广播地址为：11.1.1.1</p>
+</li>
+</ol>
+<p>再算一个172.16.4.0/26<br>将172.16.4.0 与子网掩码255.255.255.192 //192是前三个255为24位,1100 0000一个1为一位所以192<br>ip地址为0所以得网络地址为172.16.4.0<br>255-192=63<br>所以广播地址为172.16.4.63<br>所以可用地址为：172.16.4.1-172.16.4.62</p>
+<ol start="3">
+<li></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术支持</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CCNA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/12/网络技术易忘题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-路由交换命令详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -661,7 +764,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>通过自己的努力成功拿到了offer，虽然是技术支持与我想要的前端几乎不相关，但我还是很高兴成功完成了大<br>学时跨专业的梦想！然而这一切并不是我想的那么简单，发现我还有很多的要学。我既然决定了去技术支持，<br>从今天开始学习关于这技术支持的所有相关的知识。首先，先定个学习目标。<br>
+<p>虽然是技术支持与我想要的前端几乎不相关，但<br>不管怎样，先定个学习目标。<br>
         
           <a class="article-more-a" href="/2018/10/29/技术支持工程师需要的知识/#more">more >></a>
         
@@ -1004,100 +1107,6 @@
 
 
   
-    <article id="=-html中易忘知识点" class="article article-type-=  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/03/html中易忘知识点/">html中易忘知识点 </a>
-    </h1>
-  
-
-
-
-        
-        <a href="/2018/10/03/html中易忘知识点/" class="archive-article-date">
-  	<time datetime="2018-10-03T08:45:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-03</time>
-</a>
-        
-        
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>本章主要讲解关于html中自己特别容易忘记的知识点<br>
-        
-          <a class="article-more-a" href="/2018/10/03/html中易忘知识点/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/03/html中易忘知识点/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1216,11 +1225,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1228,11 +1237,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1240,7 +1249,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1249,30 +1282,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
