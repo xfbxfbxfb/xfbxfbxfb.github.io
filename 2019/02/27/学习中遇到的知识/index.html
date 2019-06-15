@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解一些工作学习中遇到的不懂的知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T14:39:02.337Z">
+<meta property="og:updated_time" content="2019-06-08T13:12:46.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全中一些常见的字母 ">
 <meta name="twitter:description" content="本章主要讲解一些工作学习中遇到的不懂的知识">
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#暂时没标题"><span class="toc-number">1.</span> <span class="toc-text">暂时没标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SNMP"><span class="toc-number">1.1.</span> <span class="toc-text">SNMP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADSL"><span class="toc-number">1.2.</span> <span class="toc-text">ADSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ISP路由"><span class="toc-number">1.3.</span> <span class="toc-text">ISP路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DMZ"><span class="toc-number">1.4.</span> <span class="toc-text">DMZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#802-1x"><span class="toc-number">1.5.</span> <span class="toc-text">802.1x</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#暂时没标题"><span class="toc-number">1.</span> <span class="toc-text">暂时没标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SNMP"><span class="toc-number">1.1.</span> <span class="toc-text">SNMP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADSL"><span class="toc-number">1.2.</span> <span class="toc-text">ADSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ISP路由"><span class="toc-number">1.3.</span> <span class="toc-text">ISP路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DMZ"><span class="toc-number">1.4.</span> <span class="toc-text">DMZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#802-1x（认证协议）"><span class="toc-number">1.5.</span> <span class="toc-text">802.1x（认证协议）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CRC-冗余校验"><span class="toc-number">1.6.</span> <span class="toc-text">CRC(冗余校验)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LCP-链路控制协议"><span class="toc-number">1.7.</span> <span class="toc-text">LCP(链路控制协议)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NCP（网络控制协议）"><span class="toc-number">1.8.</span> <span class="toc-text">NCP（网络控制协议）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSMA-CD协议（介质访问）"><span class="toc-number">1.9.</span> <span class="toc-text">CSMA/CD协议（介质访问）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STP协议"><span class="toc-number">1.10.</span> <span class="toc-text">STP协议</span></a></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -239,7 +239,15 @@
 <p>解释：<br>ADSL(非对称数字环路)业务是宽带接入技术中的一种，它利用现有的电话用户线，通过采用先进的复用技术和调制技术，使得高速的数字信息和电话语音信息在一对电话线的不同频段上同时传输，为用户提供宽带接入（从网络到用户的下行速率可达8Mbps、从用户到网络的上行速率可达1Mbps）的同时，维持用户原有的电话业务及质量不变。按照ADSL宽带业务与用户电话业务之间是线路上共享、业务上各自独立的技术特性，在业务处理上，二者是分开的。ADSL业务特别适合那些需要大量下载文件、而很少上传文件的用户使用。1996年起，开始对ADSL应用进行了大量实验。1998年，在美国地区开始进行大规模的ADSL安装工程。2000年以后，ADSL以及其他形式的DSL有望普及全美各个城市。电话公司利用ADSL这一技术，可以利用现有的电话线路同宽带运营商在市场上一较高下。</p>
 <h3 id="ISP路由"><a href="#ISP路由" class="headerlink" title="ISP路由"></a>ISP路由</h3><p>ISP就是提供你上网的公司，像网通，电信，移动等，ISP的路由器，就是在普通路由器的基础上增加了既可以同时接网通，电信，或者几个ISP放在一起的，这样的好处是解决单个路由器的网速，假如说，你用网通的宽带，你要去电信的服务器，那要的话，就比较，如果你用ISP路由同时把同通与电信挂上，就很快。</p>
 <h3 id="DMZ"><a href="#DMZ" class="headerlink" title="DMZ"></a>DMZ</h3><p>两个防火墙之间的空间被称为DMZ。与Internet相比，DMZ可以提供更高的安全性，但是其安全性比内部网络低</p>
-<h3 id="802-1x"><a href="#802-1x" class="headerlink" title="802.1x"></a>802.1x</h3><p>   802.1x协议是基于Client/Server的访问控制和认证协议。它可以限制未经授权的用户/设备通过接入端口(access<br>port)访问LAN/WLAN。在获得交换机或LAN提供的各种业务之前，802.1x对连接到交换机端口上的用户/设备进行认证。在<br>认证通过之前，802.1x只允许EAPoL（基于局域网的扩展认证协议）数据通过设备连接的交换机端口；认证通过以后，正<br>常的数据可以顺利地通过以太网端口。</p>
+<h3 id="802-1x（认证协议）"><a href="#802-1x（认证协议）" class="headerlink" title="802.1x（认证协议）"></a>802.1x（认证协议）</h3><p>   802.1x协议是基于Client/Server的访问控制和认证协议。它可以限制未经授权的用户/设备通过接入端口(access<br>port)访问LAN/WLAN。在获得交换机或LAN提供的各种业务之前，802.1x对连接到交换机端口上的用户/设备进行认证。在<br>认证通过之前，802.1x只允许EAPoL（基于局域网的扩展认证协议）数据通过设备连接的交换机端口；认证通过以后，正<br>常的数据可以顺利地通过以太网端口。</p>
+<h3 id="CRC-冗余校验"><a href="#CRC-冗余校验" class="headerlink" title="CRC(冗余校验)"></a>CRC(冗余校验)</h3><p>1， 解释：循环冗余校验，是一种根据网络数据包或电脑文件等数据产生简短固定位数校验码的一种散列函数，主要用来检测或校验数据传输或者保存后可能出现的错误。它是利用除法及余数的原理来作错误侦测的</p>
+<p>2， 简介：在数据传输过程中，无论传输系统的设计再怎么完美，差错总会存在，这种差错可能会导致在链路上传输的一个或者多个帧被破坏(出现比特差错，0变为1，或者1变为0)，从而接受方接收到错误的数据。为尽量提高接受方收到数据的正确率，在接收方接收数据之前需要对数据进行差错检测，当且仅当检测的结果为正确时接收方才真正收下数据。检测的方式有多种，常见的有奇偶校验、因特网校验和循环冗余校验等。</p>
+<h3 id="LCP-链路控制协议"><a href="#LCP-链路控制协议" class="headerlink" title="LCP(链路控制协议)"></a>LCP(链路控制协议)</h3><p>1，它是PPP协议的一个子集，在PPP通信中，发送端和接收端通过发送LCP包来确定那些在数据传输中的必要信息。<br>2，原理：在通过点对点链接建立通信之前，每个点对点链接的端必须发出链路控制协议包。不论链路控制协议包连接接不接受它的同等连接认证，它们的包大小限制是相同的，还有相同的错误控制。基本上，链接控制协议包会检查链路的连接，看它是不是能够支持用预计的传输速度进行数据传输。一旦LCP包接受了这个链接，传输将在网络中进行；如果LCP不能承担传输任务，它就会中止链接。</p>
+<p>3，自我理解：建立点对点连接时，会发送一个LCP包，检测数据，LCP包接受连接认证，则传输。</p>
+<h3 id="NCP（网络控制协议）"><a href="#NCP（网络控制协议）" class="headerlink" title="NCP（网络控制协议）"></a>NCP（网络控制协议）</h3><p>1，解释：管理对 NetWare 服务器资源的访问。NCP 向 NetWare 文件共享协议（即NFSP：NetWare File Sharing Protocol）发送过程调用消息，处理 NetWare 文件和打印资源请求。 NCP 是用于 NetWare 服务器和客户机之间传输信息的主要协议。<br>2，NCP 主要负责处理登入请求以及其它文件系统和打印系统请求。NCP 是一种基于客户机/服务器的 LAN 协议。工作站建立 NCP 请求并通过 IPX 在网络上发送这些请求服务。服务器端负责接收、拆包（unpacked）并解读 NCP 请求。<br>NCP 服务包括：文件访问、文件锁定（file locking）、安全性、资源分配跟踪（tracking of resource allocation）、事件通知（event notification）、与其它服务器同步、连接和通信、打印服务，以及队列和网络管理。<br>NCP 使用的是底层互联网分组交换协议 （即IPX ： Internetwork Packet Exchange Layer Services）。目前许多最新版的 NetWare（继 NetWare 5.0 之后 ）也都支持 TCP/IP 协议。</p>
+<h3 id="CSMA-CD协议（介质访问）"><a href="#CSMA-CD协议（介质访问）" class="headerlink" title="CSMA/CD协议（介质访问）"></a>CSMA/CD协议（介质访问）</h3><p>1，是IEEE 802.3使用的一种媒体访问控制方法。从逻辑上可以划分为两大部分：数据链路层的媒体访问控制子层（MAC）和物理层。它严格对应于ISO开放系统互连模式的最低两层。LLC子层和MAC子层在一起完成OSI模式的数据链路层的功能。<br>2，原理：所有节点都共享网络传输信道，节点在发送数据之前，首先检测信道是否空闲，如果信道空闲则发送，否则就等待；在发送出信息后，再对冲突进行检测，当发现冲突时，则取消发送。</p>
+<h3 id="STP协议"><a href="#STP协议" class="headerlink" title="STP协议"></a>STP协议</h3><p>1, 解释：STP协议（生成树协议）逻辑上断开环路，防止二层网络的广播风暴的产生。</p>
+<p>2，自我理解：不改变逻辑拓扑图，在逻辑上切断某些链路，使得主机到其他主机没有环路，消除了兜圈子的现象。</p>
 
       
 
@@ -400,7 +408,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#暂时没标题"><span class="toc-number">1.</span> <span class="toc-text">暂时没标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SNMP"><span class="toc-number">1.1.</span> <span class="toc-text">SNMP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADSL"><span class="toc-number">1.2.</span> <span class="toc-text">ADSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ISP路由"><span class="toc-number">1.3.</span> <span class="toc-text">ISP路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DMZ"><span class="toc-number">1.4.</span> <span class="toc-text">DMZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#802-1x"><span class="toc-number">1.5.</span> <span class="toc-text">802.1x</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#暂时没标题"><span class="toc-number">1.</span> <span class="toc-text">暂时没标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SNMP"><span class="toc-number">1.1.</span> <span class="toc-text">SNMP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADSL"><span class="toc-number">1.2.</span> <span class="toc-text">ADSL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ISP路由"><span class="toc-number">1.3.</span> <span class="toc-text">ISP路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DMZ"><span class="toc-number">1.4.</span> <span class="toc-text">DMZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#802-1x（认证协议）"><span class="toc-number">1.5.</span> <span class="toc-text">802.1x（认证协议）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CRC-冗余校验"><span class="toc-number">1.6.</span> <span class="toc-text">CRC(冗余校验)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LCP-链路控制协议"><span class="toc-number">1.7.</span> <span class="toc-text">LCP(链路控制协议)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NCP（网络控制协议）"><span class="toc-number">1.8.</span> <span class="toc-text">NCP（网络控制协议）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSMA-CD协议（介质访问）"><span class="toc-number">1.9.</span> <span class="toc-text">CSMA/CD协议（介质访问）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STP协议"><span class="toc-number">1.10.</span> <span class="toc-text">STP协议</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -545,15 +553,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -561,11 +561,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -573,7 +581,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">windows系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -589,7 +605,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+                <a href="javascript:void(0)" class="js-tag color2">杂</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,19 +613,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">杂</a>
+                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -670,10 +678,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://xfbxfbxfb.github.io/bo/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>最初无聊网页</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://xfbxfbxfb.github.io/resume/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Web前端简历旧版</a>
             </li>
           
             <li class="search-li">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解Linux进阶指令的作用及操作用法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-22T11:58:36.522Z">
+<meta property="og:updated_time" content="2019-06-03T08:37:53.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux进阶指令">
 <meta name="twitter:description" content="本章主要讲解Linux进阶指令的作用及操作用法">
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux进阶指令"><span class="toc-number">1.</span> <span class="toc-text">Linux进阶指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，df指令"><span class="toc-number">1.1.</span> <span class="toc-text">一，df指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，free指令"><span class="toc-number">1.2.</span> <span class="toc-text">二，free指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，head-指令"><span class="toc-number">1.3.</span> <span class="toc-text">三，head 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，tail-指令"><span class="toc-number">1.4.</span> <span class="toc-text">四，tail 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，less-指令"><span class="toc-number">1.5.</span> <span class="toc-text">五，less 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，wc-指令"><span class="toc-number">1.6.</span> <span class="toc-text">六，wc 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，date指令"><span class="toc-number">1.7.</span> <span class="toc-text">七，date指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，cal指令"><span class="toc-number">1.8.</span> <span class="toc-text">八，cal指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九，clear-ctrl-l键"><span class="toc-number">1.9.</span> <span class="toc-text">九，clear/ctrl+l键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十，-管道指令"><span class="toc-number">1.10.</span> <span class="toc-text">十，|管道指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三，高级指令"><span class="toc-number">2.</span> <span class="toc-text">三，高级指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，hostname指令"><span class="toc-number">2.1.</span> <span class="toc-text">一，hostname指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，id指令"><span class="toc-number">2.2.</span> <span class="toc-text">二，id指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，whoami指令"><span class="toc-number">2.3.</span> <span class="toc-text">三，whoami指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，ps-ef指令"><span class="toc-number">2.4.</span> <span class="toc-text">四，ps -ef指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，top指令"><span class="toc-number">2.5.</span> <span class="toc-text">五，top指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，du-sh指令"><span class="toc-number">2.6.</span> <span class="toc-text">六，du -sh指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，find指令"><span class="toc-number">2.7.</span> <span class="toc-text">七，find指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，service指令"><span class="toc-number">2.8.</span> <span class="toc-text">八，service指令</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux进阶指令"><span class="toc-number">1.</span> <span class="toc-text">Linux进阶指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，df指令"><span class="toc-number">1.1.</span> <span class="toc-text">一，df指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，free指令"><span class="toc-number">1.2.</span> <span class="toc-text">二，free指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，head-指令"><span class="toc-number">1.3.</span> <span class="toc-text">三，head 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，tail-指令"><span class="toc-number">1.4.</span> <span class="toc-text">四，tail 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，less-指令"><span class="toc-number">1.5.</span> <span class="toc-text">五，less 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，wc-指令"><span class="toc-number">1.6.</span> <span class="toc-text">六，wc 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，date指令"><span class="toc-number">1.7.</span> <span class="toc-text">七，date指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，cal指令"><span class="toc-number">1.8.</span> <span class="toc-text">八，cal指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九，clear-ctrl-l键"><span class="toc-number">1.9.</span> <span class="toc-text">九，clear/ctrl+l键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十，-管道指令"><span class="toc-number">1.10.</span> <span class="toc-text">十，|管道指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三，高级指令"><span class="toc-number">2.</span> <span class="toc-text">三，高级指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，hostname指令"><span class="toc-number">2.1.</span> <span class="toc-text">一，hostname指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，id指令"><span class="toc-number">2.2.</span> <span class="toc-text">二，id指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，whoami指令"><span class="toc-number">2.3.</span> <span class="toc-text">三，whoami指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，ps-ef指令"><span class="toc-number">2.4.</span> <span class="toc-text">四，ps -ef指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，top指令"><span class="toc-number">2.5.</span> <span class="toc-text">五，top指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，du-sh指令"><span class="toc-number">2.6.</span> <span class="toc-text">六，du -sh指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，find指令"><span class="toc-number">2.7.</span> <span class="toc-text">七，find指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，service指令"><span class="toc-number">2.8.</span> <span class="toc-text">八，service指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九，kill指令"><span class="toc-number">2.9.</span> <span class="toc-text">九，kill指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十，ifconfig指令"><span class="toc-number">2.10.</span> <span class="toc-text">十，ifconfig指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一，reboot指令"><span class="toc-number">2.11.</span> <span class="toc-text">十一，reboot指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十二，shutdown指令"><span class="toc-number">2.12.</span> <span class="toc-text">十二，shutdown指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十三，uptime指令"><span class="toc-number">2.13.</span> <span class="toc-text">十三，uptime指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十四，uname指令"><span class="toc-number">2.14.</span> <span class="toc-text">十四，uname指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十五，netstat-tnlp指令"><span class="toc-number">2.15.</span> <span class="toc-text">十五，netstat -tnlp指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十六，man指令"><span class="toc-number">2.16.</span> <span class="toc-text">十六，man指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四，特殊的快捷键"><span class="toc-number">3.</span> <span class="toc-text">四，特殊的快捷键</span></a></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -237,7 +237,8 @@
 <h3 id="四，tail-指令"><a href="#四，tail-指令" class="headerlink" title="四，tail 指令"></a>四，tail 指令</h3><p>1，tail指令的作用：查看文件末n行，如果不指定n，则默认显示末10行<br>2，tail指令的语法：：<font color="red">#tail -n 文件路经</font></p>
 <h3 id="五，less-指令"><a href="#五，less-指令" class="headerlink" title="五，less 指令"></a>五，less 指令</h3><p>1，less指令的作用：查看文件，查看较少的内容，输入数字n可以查看n行，空格向下翻页。<br>2，less指令的语法：<font color="red">#less 文件路径</font></p>
 <h3 id="六，wc-指令"><a href="#六，wc-指令" class="headerlink" title="六，wc 指令"></a>六，wc 指令</h3><p>1， wc指令的作用：统计文件内容信息（包含行数，单词数，字节数）<br>2， wc指令的语法：</p>
-<p><font color="red">主要记：#wc -l  表示lines,行数。<br>#wc -w   表示word ,单词数。<br>#wc -c  表示bytes，字节数。</font></p>
+<font color="red">主要记：#wc -l  表示lines,行数。<br>#wc -w   表示word ,单词数。<br>#wc -c  表示bytes，字节数。</font>
+
 <h3 id="七，date指令"><a href="#七，date指令" class="headerlink" title="七，date指令"></a>七，date指令</h3><p>1， date指令的作用：表示操作时间日期（读取，设置）<br>2， date指令的语法：<br>输出形式为：xx年xx月xx日 星期x xx:xx:xx     命令为： #date<br>输出形式为：2019-4-16                      命令为： #date +%F 等价于#date “+%Y-%m-%d<br>输出形式为： 2019-4-16 16：12：12           命令为： #date +%F%T 等价于#date +%Y-%m-%d %H:%D:%s<br>查询第过去这时候的时间或者之后的时间          命令为： #date -d  -1day +%Y-%m-%d %H:%D:%s<br>其中的-1day表示过去的一天时间  后面的表示为前或后的时间</p>
 <table>
 <thead>
@@ -284,8 +285,9 @@
 <h3 id="八，cal指令"><a href="#八，cal指令" class="headerlink" title="八，cal指令"></a>八，cal指令</h3><p>1，作用：主要用来操作日历<br>2，语法如下：<br>语法1：cal 等价于 cal -1 直接输出当前月份的的日历<br>语法2： cal -3  输出上一个月当月和下一个月的日历<br>语法3： cal -y  输出一年的日历<br>语法4： cal -m  输出将日历的星期一放到前面</p>
 <h3 id="九，clear-ctrl-l键"><a href="#九，clear-ctrl-l键" class="headerlink" title="九，clear/ctrl+l键"></a>九，clear/ctrl+l键</h3><p>1，作用：将前的命令隐藏和windows的cls命令不一样的windows是完全清除。<br>2，语法：# clear</p>
 <h3 id="十，-管道指令"><a href="#十，-管道指令" class="headerlink" title="十，|管道指令"></a>十，|管道指令</h3><p>1，一般用于”过滤”，”特殊”，”扩展处理”，主要用于过滤<br>2，管道不能单独使用，必须和一些指令进行配合使用。<br>如过滤：</p>
-<p><font color="red">#ls / | grep y<br>grep主要是用于过滤。此命令表示的是过滤根命令下的目录含有y的文件。<br>如：统计目录下文档总数。</font></p>
-<p><font color="blue">#ls /|wc -l</font></p>
+<font color="red">#ls / | grep y</font><br>grep主要是用于过滤。此命令表示的是过滤根命令下的目录含有y的文件。<br>如：统计目录下文档总数。<br><font color="blue">#ls /|wc -l</font>
+
+
 <h2 id="三，高级指令"><a href="#三，高级指令" class="headerlink" title="三，高级指令"></a>三，高级指令</h2><h3 id="一，hostname指令"><a href="#一，hostname指令" class="headerlink" title="一，hostname指令"></a>一，hostname指令</h3><p>1， 作用：操作主机名的读取<br>2， 语法：<br>  语法1： #hostname        含义：表示输出完整的主机名<br>  语法2： #hostname -f     含义：表示输出当前主机名的FQDN（全限定域名如输入网址locallhost）</p>
 <h3 id="二，id指令"><a href="#二，id指令" class="headerlink" title="二，id指令"></a>二，id指令</h3><p>作用：查看一个用户的一些基本信息，（包含用户id，用户组id，附加组id..）<br>语法1：#id    当前用户的基本信息。<br>语法2：#id 用户名    显示此用户名的信息，</p>
 <h3 id="三，whoami指令"><a href="#三，whoami指令" class="headerlink" title="三，whoami指令"></a>三，whoami指令</h3><p>1,作用:显示当前用户的用户名，一般用于shell脚本，用于获取当前操作用户的用户名方便记录日志。<br>2，语法：直接输入whoami</p>
@@ -300,6 +302,16 @@
 <p>   ④在根目录下/etc/sene.d搜索所有<strong>文件</strong><br> 命令如下： #find /etc/sene.d  -type f</p>
 <p><strong><em>加个|wc -l可以输出文件个数</em></strong></p>
 <h3 id="八，service指令"><a href="#八，service指令" class="headerlink" title="八，service指令"></a>八，service指令</h3><p>1，作用控制一些软件的服务的启动/停止/重启<br>2，语法#service httpd start/stop/restart<br>例如：启动centos安装的Apache服务器，其服务器名为httpd<br>语法：#service httpd  start</p>
+<h3 id="九，kill指令"><a href="#九，kill指令" class="headerlink" title="九，kill指令"></a>九，kill指令</h3><p>1，作用：表示杀死进程。(主要是要将僵尸进程杀死)<br>2，语法1：#kill 进程PID (所以它要用pc指令进行查找进程PID)</p>
+<p>   语法2：#killall 进程名称  这个只要知道进程的名称就行</p>
+<h3 id="十，ifconfig指令"><a href="#十，ifconfig指令" class="headerlink" title="十，ifconfig指令"></a>十，ifconfig指令</h3><p>1，作用：用于操作网卡相关指令<br>2，语法1: #ifconfig   读取网卡信息</p>
+<h3 id="十一，reboot指令"><a href="#十一，reboot指令" class="headerlink" title="十一，reboot指令"></a>十一，reboot指令</h3><p>1,作用：重新启动电脑<br>2,语法：#reboot </p>
+<h3 id="十二，shutdown指令"><a href="#十二，shutdown指令" class="headerlink" title="十二，shutdown指令"></a>十二，shutdown指令</h3><p>1,作用：关机<br>2,语法：#showdown -h now “关机提示”或#showdown -h 20:00 “关机提示”<br>意思为现在关机或者为在20：00关机</p>
+<h3 id="十三，uptime指令"><a href="#十三，uptime指令" class="headerlink" title="十三，uptime指令"></a>十三，uptime指令</h3><p>1,作用：输出计算机开机到现在的时间，<br>2, 语法：#uptime</p>
+<h3 id="十四，uname指令"><a href="#十四，uname指令" class="headerlink" title="十四，uname指令"></a>十四，uname指令</h3><p>1,作用：获取操作系统的信息<br>2,语法：#uname -a  表示获取全部系统信息(类型，全部主机名，内核版本，发布时间，开源计划)</p>
+<h3 id="十五，netstat-tnlp指令"><a href="#十五，netstat-tnlp指令" class="headerlink" title="十五，netstat -tnlp指令"></a>十五，netstat -tnlp指令</h3><p>1,作用：查看网络连接状态<br>2,语法：#netstat -tnlp<br>选项说明：<br>  -t: 表示只列出tcp协议的连接<br>  -n: 表示将地址从字母组合转换成ip地址，将协议转换成端口号来显示。<br>  -l: 表示过滤出“state”列中其值为LISTEN(监听)的连接。<br>  -p: 表示显示发起连接的进程PID和进程名称。</p>
+<h3 id="十六，man指令"><a href="#十六，man指令" class="headerlink" title="十六，man指令"></a>十六，man指令</h3><p>1,作用manual,手册（包含了Linux中全部命令手册，英文的）<br>2,语法：#man 命令 （退出按下q键）</p>
+<h2 id="四，特殊的快捷键"><a href="#四，特殊的快捷键" class="headerlink" title="四，特殊的快捷键"></a>四，特殊的快捷键</h2><p>1,快速删除光标前的内容：     ctrl + u<br>2,快速删除光标后的内容：     ctrl + k</p>
 
       
 
@@ -418,6 +430,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/05/19/服务器Windows一些知识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          服务器Windows一些知识 
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/03/31/工作中学的一些技术/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"> 工作中学的一些技术</div>
@@ -447,7 +468,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux进阶指令"><span class="toc-number">1.</span> <span class="toc-text">Linux进阶指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，df指令"><span class="toc-number">1.1.</span> <span class="toc-text">一，df指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，free指令"><span class="toc-number">1.2.</span> <span class="toc-text">二，free指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，head-指令"><span class="toc-number">1.3.</span> <span class="toc-text">三，head 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，tail-指令"><span class="toc-number">1.4.</span> <span class="toc-text">四，tail 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，less-指令"><span class="toc-number">1.5.</span> <span class="toc-text">五，less 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，wc-指令"><span class="toc-number">1.6.</span> <span class="toc-text">六，wc 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，date指令"><span class="toc-number">1.7.</span> <span class="toc-text">七，date指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，cal指令"><span class="toc-number">1.8.</span> <span class="toc-text">八，cal指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九，clear-ctrl-l键"><span class="toc-number">1.9.</span> <span class="toc-text">九，clear/ctrl+l键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十，-管道指令"><span class="toc-number">1.10.</span> <span class="toc-text">十，|管道指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三，高级指令"><span class="toc-number">2.</span> <span class="toc-text">三，高级指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，hostname指令"><span class="toc-number">2.1.</span> <span class="toc-text">一，hostname指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，id指令"><span class="toc-number">2.2.</span> <span class="toc-text">二，id指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，whoami指令"><span class="toc-number">2.3.</span> <span class="toc-text">三，whoami指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，ps-ef指令"><span class="toc-number">2.4.</span> <span class="toc-text">四，ps -ef指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，top指令"><span class="toc-number">2.5.</span> <span class="toc-text">五，top指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，du-sh指令"><span class="toc-number">2.6.</span> <span class="toc-text">六，du -sh指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，find指令"><span class="toc-number">2.7.</span> <span class="toc-text">七，find指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，service指令"><span class="toc-number">2.8.</span> <span class="toc-text">八，service指令</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux进阶指令"><span class="toc-number">1.</span> <span class="toc-text">Linux进阶指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，df指令"><span class="toc-number">1.1.</span> <span class="toc-text">一，df指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，free指令"><span class="toc-number">1.2.</span> <span class="toc-text">二，free指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，head-指令"><span class="toc-number">1.3.</span> <span class="toc-text">三，head 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，tail-指令"><span class="toc-number">1.4.</span> <span class="toc-text">四，tail 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，less-指令"><span class="toc-number">1.5.</span> <span class="toc-text">五，less 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，wc-指令"><span class="toc-number">1.6.</span> <span class="toc-text">六，wc 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，date指令"><span class="toc-number">1.7.</span> <span class="toc-text">七，date指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，cal指令"><span class="toc-number">1.8.</span> <span class="toc-text">八，cal指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九，clear-ctrl-l键"><span class="toc-number">1.9.</span> <span class="toc-text">九，clear/ctrl+l键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十，-管道指令"><span class="toc-number">1.10.</span> <span class="toc-text">十，|管道指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三，高级指令"><span class="toc-number">2.</span> <span class="toc-text">三，高级指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，hostname指令"><span class="toc-number">2.1.</span> <span class="toc-text">一，hostname指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，id指令"><span class="toc-number">2.2.</span> <span class="toc-text">二，id指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，whoami指令"><span class="toc-number">2.3.</span> <span class="toc-text">三，whoami指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，ps-ef指令"><span class="toc-number">2.4.</span> <span class="toc-text">四，ps -ef指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五，top指令"><span class="toc-number">2.5.</span> <span class="toc-text">五，top指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六，du-sh指令"><span class="toc-number">2.6.</span> <span class="toc-text">六，du -sh指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七，find指令"><span class="toc-number">2.7.</span> <span class="toc-text">七，find指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八，service指令"><span class="toc-number">2.8.</span> <span class="toc-text">八，service指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九，kill指令"><span class="toc-number">2.9.</span> <span class="toc-text">九，kill指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十，ifconfig指令"><span class="toc-number">2.10.</span> <span class="toc-text">十，ifconfig指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一，reboot指令"><span class="toc-number">2.11.</span> <span class="toc-text">十一，reboot指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十二，shutdown指令"><span class="toc-number">2.12.</span> <span class="toc-text">十二，shutdown指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十三，uptime指令"><span class="toc-number">2.13.</span> <span class="toc-text">十三，uptime指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十四，uname指令"><span class="toc-number">2.14.</span> <span class="toc-text">十四，uname指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十五，netstat-tnlp指令"><span class="toc-number">2.15.</span> <span class="toc-text">十五，netstat -tnlp指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十六，man指令"><span class="toc-number">2.16.</span> <span class="toc-text">十六，man指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四，特殊的快捷键"><span class="toc-number">3.</span> <span class="toc-text">四，特殊的快捷键</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -592,15 +613,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -608,11 +621,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,7 +641,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">windows系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -636,7 +665,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+                <a href="javascript:void(0)" class="js-tag color2">杂</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,19 +673,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">杂</a>
+                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -717,10 +738,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://xfbxfbxfb.github.io/bo/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>最初无聊网页</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://xfbxfbxfb.github.io/resume/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Web前端简历旧版</a>
             </li>
           
             <li class="search-li">
