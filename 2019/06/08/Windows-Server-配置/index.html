@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="梦里北极光的博客">
 <meta property="og:description" content="本章主要讲解关于Windows服务器的一些配置，和系统的一些要点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-15T11:54:55.889Z">
+<meta property="og:updated_time" content="2019-06-27T02:29:36.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows Server 配置 ">
 <meta name="twitter:description" content="本章主要讲解关于Windows服务器的一些配置，和系统的一些要点">
@@ -79,7 +79,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">博客说明</a>
     			
             
 		</nav>
@@ -207,7 +207,7 @@
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
       <strong class="toc-title">文章目录</strong>
-         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Server-2008-系统的讲解"><span class="toc-number">1.</span> <span class="toc-text">Windows Server 2008 系统的讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，一些Windows的命令操作"><span class="toc-number">1.1.</span> <span class="toc-text">一，一些Windows的命令操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，windows的配置"><span class="toc-number">1.2.</span> <span class="toc-text">二，windows的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器的安装区别"><span class="toc-number">1.2.1.</span> <span class="toc-text">服务器的安装区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#完全安装的配置"><span class="toc-number">1.2.2.</span> <span class="toc-text">完全安装的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器安装的配置"><span class="toc-number">1.2.3.</span> <span class="toc-text">服务器安装的配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，服务器中的一些理解"><span class="toc-number">1.3.</span> <span class="toc-text">三，服务器中的一些理解</span></a></li></ol></li></ol>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Server-2008-系统的讲解"><span class="toc-number">1.</span> <span class="toc-text">Windows Server 2008 系统的讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，一些Windows的命令操作"><span class="toc-number">1.1.</span> <span class="toc-text">一，一些Windows的命令操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，windows的配置"><span class="toc-number">1.2.</span> <span class="toc-text">二，windows的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，core服务器的命令配置"><span class="toc-number">1.3.</span> <span class="toc-text">三，core服务器的命令配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1，重命名服务器"><span class="toc-number">1.3.1.</span> <span class="toc-text">1，重命名服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2，修改管理员密码"><span class="toc-number">1.3.2.</span> <span class="toc-text">2，修改管理员密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3，配置网络"><span class="toc-number">1.3.3.</span> <span class="toc-text">3，配置网络</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，服务器中的一些理解"><span class="toc-number">1.4.</span> <span class="toc-text">四，服务器中的一些理解</span></a></li></ol></li></ol>
        </div>
  <script type="text/javascript">
   function showToc(){
@@ -231,14 +231,31 @@
         <blockquote>
 <p>本章主要讲解关于Windows服务器的一些配置，和系统的一些要点<br><a id="more"></a></p>
 </blockquote>
-<h2 id="Windows-Server-2008-系统的讲解"><a href="#Windows-Server-2008-系统的讲解" class="headerlink" title="Windows Server 2008 系统的讲解"></a>Windows Server 2008 系统的讲解</h2><h3 id="一，一些Windows的命令操作"><a href="#一，一些Windows的命令操作" class="headerlink" title="一，一些Windows的命令操作"></a>一，一些Windows的命令操作</h3><p>1，命令： MMC        作用：进入控制台（服务器和普通版本都可以进）<br>2，命令： msconfig   作用：进入系统配置 <br></p>
-<p><font color="red">1，在这里面有许多工具</font><br><br>比如：快速进入系统的信息,启动关闭一些系统自动启动的，当然在电脑管家，360等软件也可以关闭自动启动。</p>
-<h3 id="二，windows的配置"><a href="#二，windows的配置" class="headerlink" title="二，windows的配置"></a>二，windows的配置</h3><p>1，更改本机的发送侦和接收侦的MAC地址，但不会改变本机的物理地址。   方法：在网卡设备的属性的高级选项改。</p>
-<h4 id="服务器的安装区别"><a href="#服务器的安装区别" class="headerlink" title="服务器的安装区别"></a>服务器的安装区别</h4><p>1,在安装的过程中有完全安装和服务器核心安装，<br>区别：<br>服务器核心安装最明显的是少了GUI界面，只能用命令提示符进行操作，但减少系统资源和磁盘空间。</p>
-<h4 id="完全安装的配置"><a href="#完全安装的配置" class="headerlink" title="完全安装的配置"></a>完全安装的配置</h4><h4 id="服务器安装的配置"><a href="#服务器安装的配置" class="headerlink" title="服务器安装的配置"></a>服务器安装的配置</h4><p>1，重命名服务器<br>语法：netdom /?<br>    netdow renamecomputer 本机名 /newname:新名字</p>
-<p>2，修改管理员密码<br>语法：net user adminstrator 密码</p>
-<p>3，配置网络<br>1,查看网络适配器名称<br>语法：netsh interface ipv4 show interface<br>2,配置获取ip地址<br>DHCP获取<br>语法：netsh interface ipv4 set address name=”本地连接” source=dhcp<br>DNS获取<br>语法：netsh interface ipv4 set dns name=”本地连接” source=dhcp<br>获取静态ip地址<br>语法：netsh interface ipv4 set address name=”本地连接” source =static addr=192.168.1.2</p>
-<h3 id="三，服务器中的一些理解"><a href="#三，服务器中的一些理解" class="headerlink" title="三，服务器中的一些理解"></a>三，服务器中的一些理解</h3><p>1，角色：软件程序的集合，允许为其他计算机执行的功能。如DNS服务器角色。<br>2，角色服务：指软件程序。一个角色有一个或多个角色服务。</p>
+<h2 id="Windows-Server-2008-系统的讲解"><a href="#Windows-Server-2008-系统的讲解" class="headerlink" title="Windows Server 2008 系统的讲解"></a>Windows Server 2008 系统的讲解</h2><h3 id="一，一些Windows的命令操作"><a href="#一，一些Windows的命令操作" class="headerlink" title="一，一些Windows的命令操作"></a>一，一些Windows的命令操作</h3><p>1，命令： MMC        作用：进入控制台（服务器和普通版本都可以进）<br>2，命令： msconfig   作用：进入系统配置 </p>
+<font color="red">在这里面有许多工具</font>
+
+<p>比如：快速进入系统的信息,启动关闭一些系统自动启动的，当然在电脑管家，360等软件也可以关闭自动启动。</p>
+<h3 id="二，windows的配置"><a href="#二，windows的配置" class="headerlink" title="二，windows的配置"></a>二，windows的配置</h3><p>1，更改本机的发送侦和接收侦的MAC地址，但不会改变本机的物理地址。   方法：在网卡设备的属性的高级选项改。<br>服务器的安装区别<br>在安装的过程中有完全安装和服务器核心安装，<br>区别：<br>服务器核心安装最明显的是少了GUI界面，只能用命令提示符进行操作，但减少系统资源和磁盘空间。<br>完全安装的配置</p>
+<h3 id="三，core服务器的命令配置"><a href="#三，core服务器的命令配置" class="headerlink" title="三，core服务器的命令配置"></a>三，core服务器的命令配置</h3><h4 id="1，重命名服务器"><a href="#1，重命名服务器" class="headerlink" title="1，重命名服务器"></a>1，重命名服务器</h4><p>语法：netdom /? <font color="blue">// 帮助查找,搜索提示</font></p>
+ <font color="red"> netdow renamecomputer 本机名 /newname:新名字</font>
+
+<h4 id="2，修改管理员密码"><a href="#2，修改管理员密码" class="headerlink" title="2，修改管理员密码"></a>2，修改管理员密码</h4><p>语法：<font color="red">net user adminstrator 密码</font></p>
+<h4 id="3，配置网络"><a href="#3，配置网络" class="headerlink" title="3，配置网络"></a>3，配置网络</h4><p>1,查看网络适配器名称<br>语法：<font color="red">netsh interface ipv4 show interface</font></p>
+<p>2，重命名网络适配器</p>
+<p> 语法：<font color="red">netsh interface set interface name=”oldname” newname=”newname”</font></p>
+<p>3，禁用网络适配器<br>语法：<font color="red">netsh interface set interface name=”name” admin=DISABLED</font></p>
+<p>4，DHCP获取ip</p>
+<p>语法：<font color="red">netsh interface ipv4 set address name=”本地连接” source=dhcp</font></p>
+<p>5，DNS获取</p>
+<p>语法：<font color="red">netsh interface ipv4 set dns name=”本地连接” source=dhcp</font></p>
+<p>6，DNS的配置</p>
+<p>语法：<font color="red">netsh interface ipv4 set dns name=”本地连接” source=static addr=218.74.122.12 register=primary(设置为主要，即默认)</font></p>
+<p>7，dns的备份</p>
+<p>语法：<font color="red">netsh interface ipv4 set dns name=”本地连接” source=static addr=218.74.122.12  index=2 </font></p>
+<p>8，获取静态ip地址</p>
+<p>语法：<font color="red">netsh interface ipv4 set address name=”本地连接” source =static addr=192.168.1.2</font></p>
+<p>(<font color="red">子网掩码设置</font>)mask=255.255.255.0<br>(<font color="red">网关设置</font>)gateway=192.168.0.1<br>(<font color="red">跳数设置（可不管）</font>)gwmetric=auto</p>
+<h3 id="四，服务器中的一些理解"><a href="#四，服务器中的一些理解" class="headerlink" title="四，服务器中的一些理解"></a>四，服务器中的一些理解</h3><p>1，角色：软件程序的集合，允许为其他计算机执行的功能。如DNS服务器角色。<br>2，角色服务：指软件程序。一个角色有一个或多个角色服务。</p>
 
       
 
@@ -390,7 +407,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Server-2008-系统的讲解"><span class="toc-number">1.</span> <span class="toc-text">Windows Server 2008 系统的讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，一些Windows的命令操作"><span class="toc-number">1.1.</span> <span class="toc-text">一，一些Windows的命令操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，windows的配置"><span class="toc-number">1.2.</span> <span class="toc-text">二，windows的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器的安装区别"><span class="toc-number">1.2.1.</span> <span class="toc-text">服务器的安装区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#完全安装的配置"><span class="toc-number">1.2.2.</span> <span class="toc-text">完全安装的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器安装的配置"><span class="toc-number">1.2.3.</span> <span class="toc-text">服务器安装的配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，服务器中的一些理解"><span class="toc-number">1.3.</span> <span class="toc-text">三，服务器中的一些理解</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Server-2008-系统的讲解"><span class="toc-number">1.</span> <span class="toc-text">Windows Server 2008 系统的讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，一些Windows的命令操作"><span class="toc-number">1.1.</span> <span class="toc-text">一，一些Windows的命令操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，windows的配置"><span class="toc-number">1.2.</span> <span class="toc-text">二，windows的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三，core服务器的命令配置"><span class="toc-number">1.3.</span> <span class="toc-text">三，core服务器的命令配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1，重命名服务器"><span class="toc-number">1.3.1.</span> <span class="toc-text">1，重命名服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2，修改管理员密码"><span class="toc-number">1.3.2.</span> <span class="toc-text">2，修改管理员密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3，配置网络"><span class="toc-number">1.3.3.</span> <span class="toc-text">3，配置网络</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四，服务器中的一些理解"><span class="toc-number">1.4.</span> <span class="toc-text">四，服务器中的一些理解</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -506,7 +523,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">博客说明</a></li>
       
         
     </ul>
@@ -527,6 +544,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -539,19 +560,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -559,11 +568,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术支持</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -575,15 +588,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -595,11 +608,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CCNA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -698,7 +719,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">本博客主要用于记录笔记&lt;br&gt;如有问题请联系博主&lt;br&gt;谢谢</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">本博客主要用于记录笔记&lt;br&gt;如有其他问题请及时联系博主&lt;br&gt;谢谢</div>
   	  	
     	</section>
     
