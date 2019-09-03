@@ -165,6 +165,101 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-VM虚拟机的自我理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/03/VM虚拟机的自我理解/">VM虚拟机的自我理解</a>
+    </h1>
+  
+
+
+
+        
+        <a href="/2019/09/03/VM虚拟机的自我理解/" class="archive-article-date">
+  	<time datetime="2019-09-03T01:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+</a>
+        
+        
+      </header>
+      
+    
+    
+      <!-- 目录内容 -->
+       
+   <!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本章主要讲解VMware软件中的一些知识点，这对搭建模拟环境有着重要的意义。</p>
+</blockquote>
+<h2 id="VM讲解"><a href="#VM讲解" class="headerlink" title="VM讲解"></a>VM讲解</h2><h3 id="一，VM简介"><a href="#一，VM简介" class="headerlink" title="一，VM简介"></a>一，VM简介</h3><p>1，VM中默认安装了两个虚拟网卡：VMnet1和VMnet8.其中VMnet1主要是用于host网卡，VMnet8主要是NAT网卡。</p>
+<h3 id="二，，VM中网络适配器的三大模式"><a href="#二，，VM中网络适配器的三大模式" class="headerlink" title="二，，VM中网络适配器的三大模式"></a>二，，VM中网络适配器的三大模式</h3><p>三大模式：桥接模式，NAT模式，仅主机模式</p>
+<h4 id="2-1-桥接模式："><a href="#2-1-桥接模式：" class="headerlink" title="2.1 桥接模式："></a>2.1 桥接模式：</h4><p>自我理解：使用桥接模式，能够自动获取外网的ip,dns等一些网络信息，简单明了的说，它就相当于拥有网卡的完整的物理计算机。</p>
+<h4 id="2-2-NAT模式："><a href="#2-2-NAT模式：" class="headerlink" title="2.2 NAT模式："></a>2.2 NAT模式：</h4><p>自我理解：是最简单的虚拟机上网模式，只要主机能上网，虚拟机就能上网。虚拟机是通过VMnet8网络中的DHCP服务器进行获取ip地址等一系列网络配置。唯一差别就是不能够外网连接此虚拟机。</p>
+<h4 id="2-3-仅主机模式："><a href="#2-3-仅主机模式：" class="headerlink" title="2.3 仅主机模式："></a>2.3 仅主机模式：</h4><p>自我理解：虚拟机是和外部网络隔离的，不能够联外网的，虚拟机只能和虚拟机或者主机互访，（虚拟机的配置信息都是由VMnet1虚拟网络的DHCP服务器动态分配的。)</p>
+<p><font color="red" size="4px">补充：vmware14密钥：</font><b>CG54H-D8D0H-H8DHY-C6X7X-N2KG6</b></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术支持</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/03/VM虚拟机的自我理解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Windows-Server-配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1007,96 +1102,6 @@
 
 
   
-    <article id="=-windows重装系统" class="article article-type-=  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/20/windows重装系统/">windows重装系统</a>
-    </h1>
-  
-
-
-
-        
-        <a href="/2018/11/20/windows重装系统/" class="archive-article-date">
-  	<time datetime="2018-11-20T01:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        
-        
-      </header>
-      
-    
-    
-      <!-- 目录内容 -->
-       
-   <!-- 目录内容结束 -->
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>本片文章主要写了关于windows系统的重装的问题<br>
-        
-          <a class="article-more-a" href="/2018/11/20/windows重装系统/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">windows系统</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/20/windows重装系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1203,10 +1208,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -1215,11 +1216,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1227,15 +1228,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1243,11 +1236,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">windows系统</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">windows系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1259,7 +1260,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1267,7 +1272,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color5">模板引擎</a>
               </li>
              
               <li class="article-tag-list-item">

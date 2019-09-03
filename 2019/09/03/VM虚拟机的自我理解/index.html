@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Jquery | 梦里北极光的博客</title>
+  <title>VM虚拟机的自我理解 | 梦里北极光的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="将写代码时碰到的难题在百度找的方法记录在此">
-<meta name="keywords" content="学习,前端,jquery">
+  <meta name="description" content="本章主要讲解VMware软件中的一些知识点，这对搭建模拟环境有着重要的意义。  VM讲解一，VM简介1，VM中默认安装了两个虚拟网卡：VMnet1和VMnet8.其中VMnet1主要是用于host网卡，VMnet8主要是NAT网卡。 二，，VM中网络适配器的三大模式三大模式：桥接模式，NAT模式，仅主机模式 2.1 桥接模式：自我理解：使用桥接模式，能够自动获取外网的ip,dns等一些网络信息，">
+<meta name="keywords" content="学习,技术支持">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jquery">
-<meta property="og:url" content="http://yoursite.com/2018/09/18/Jquery易忘知识/index.html">
+<meta property="og:title" content="VM虚拟机的自我理解">
+<meta property="og:url" content="http://yoursite.com/2019/09/03/VM虚拟机的自我理解/index.html">
 <meta property="og:site_name" content="梦里北极光的博客">
-<meta property="og:description" content="将写代码时碰到的难题在百度找的方法记录在此">
+<meta property="og:description" content="本章主要讲解VMware软件中的一些知识点，这对搭建模拟环境有着重要的意义。  VM讲解一，VM简介1，VM中默认安装了两个虚拟网卡：VMnet1和VMnet8.其中VMnet1主要是用于host网卡，VMnet8主要是NAT网卡。 二，，VM中网络适配器的三大模式三大模式：桥接模式，NAT模式，仅主机模式 2.1 桥接模式：自我理解：使用桥接模式，能够自动获取外网的ip,dns等一些网络信息，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-08T03:21:52.342Z">
+<meta property="og:updated_time" content="2019-09-03T02:45:40.484Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jquery">
-<meta name="twitter:description" content="将写代码时碰到的难题在百度找的方法记录在此">
+<meta name="twitter:title" content="VM虚拟机的自我理解">
+<meta name="twitter:description" content="本章主要讲解VMware软件中的一些知识点，这对搭建模拟环境有着重要的意义。  VM讲解一，VM简介1，VM中默认安装了两个虚拟网卡：VMnet1和VMnet8.其中VMnet1主要是用于host网卡，VMnet8主要是NAT网卡。 二，，VM中网络适配器的三大模式三大模式：桥接模式，NAT模式，仅主机模式 2.1 桥接模式：自我理解：使用桥接模式，能够自动获取外网的ip,dns等一些网络信息，">
   
     <link rel="alternative" href="/atom.xml" title="梦里北极光的博客" type="application/atom+xml">
   
@@ -167,22 +167,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="=-Jquery易忘知识" class="article article-type-= " itemscope itemprop="blogPost">
+            <article id="post-VM虚拟机的自我理解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Jquery
+      VM虚拟机的自我理解
     </h1>
   
 
 
 
         
-        <a href="/2018/09/18/Jquery易忘知识/" class="archive-article-date">
-  	<time datetime="2018-09-18T01:53:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-18</time>
+        <a href="/2019/09/03/VM虚拟机的自我理解/" class="archive-article-date">
+  	<time datetime="2019-09-03T01:58:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
 </a>
         
         
@@ -195,28 +195,44 @@
     
     
       <!-- 目录内容 -->
-       
+
+  <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+        <span class="btn-bg"></span>
+        <span class="btn-text">文章导航</span>
+        </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+      <strong class="toc-title">文章目录</strong>
+         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VM讲解"><span class="toc-number">1.</span> <span class="toc-text">VM讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，VM简介"><span class="toc-number">1.1.</span> <span class="toc-text">一，VM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，，VM中网络适配器的三大模式"><span class="toc-number">1.2.</span> <span class="toc-text">二，，VM中网络适配器的三大模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-桥接模式："><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 桥接模式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-NAT模式："><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 NAT模式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-仅主机模式："><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 仅主机模式：</span></a></li></ol></li></ol></li></ol>
+       </div>
+ <script type="text/javascript">
+  function showToc(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:block");
+      show_toc_btn.setAttribute("style","display:none");
+      };
+  function showBtn(){
+      var toc_article = document.getElementById("toc-article");
+      var show_toc_btn = document.getElementById("show-toc-btn");
+      toc_article.setAttribute("style","display:none");
+      show_toc_btn.setAttribute("style","display:block");
+      };
+ </script>
+          
    <!-- 目录内容结束 -->
 
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>将写代码时碰到的难题在百度找的方法记录在此<br><a id="more"></a></p>
+<p>本章主要讲解VMware软件中的一些知识点，这对搭建模拟环境有着重要的意义。</p>
 </blockquote>
-<h2 id="Jquery中valitate的使用"><a href="#Jquery中valitate的使用" class="headerlink" title="Jquery中valitate的使用"></a>Jquery中valitate的使用</h2><p><a href="https://www.jb51.net/article/107581.htm" target="_blank" rel="noopener">原文链接</a></p>
-<h2 id="Jq中时间格式化"><a href="#Jq中时间格式化" class="headerlink" title="Jq中时间格式化"></a>Jq中时间格式化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">时间格式化</span><br><span class="line">Date.prototype.Format = function (fmt) &#123; //author: meizz</span><br><span class="line">  var o = &#123;</span><br><span class="line">    &quot;M+&quot;: this.getMonth() + 1, //月份</span><br><span class="line">    &quot;d+&quot;: this.getDate(), //日</span><br><span class="line">    &quot;h+&quot;: this.getHours(), //小时</span><br><span class="line">    &quot;m+&quot;: this.getMinutes(), //分</span><br><span class="line">    &quot;s+&quot;: this.getSeconds(), //秒</span><br><span class="line">    &quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3), //季度</span><br><span class="line">    &quot;S&quot;: this.getMilliseconds() //毫秒</span><br><span class="line">  &#125;;</span><br><span class="line">  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + &quot;&quot;).substr(4 - RegExp.$1.length));</span><br><span class="line">  for (var k in o)</span><br><span class="line">  if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : ((&quot;00&quot; + o[k]).substr((&quot;&quot; + o[k]).length)));</span><br><span class="line">  return fmt;</span><br><span class="line">&#125;</span><br><span class="line">$(function()&#123;</span><br><span class="line">  var date=new Date();</span><br><span class="line">  &lt;!-- 格式可改变 --&gt;</span><br><span class="line">  alert(JSON.stringify(date.Format(&quot;yyyy年MM月dd hh:mm:ss&quot;)));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>代码输出当前的年月日时分。</p>
-<h2 id="表格的增加列与删除"><a href="#表格的增加列与删除" class="headerlink" title="表格的增加列与删除"></a>表格的增加列与删除</h2><h3 id="列增加但dom有增加"><a href="#列增加但dom有增加" class="headerlink" title="列增加但dom有增加"></a>列增加但dom有增加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var del = &quot;&lt;a class=&apos;del&apos;&gt;删除&lt;/a&gt;&quot;;</span><br><span class="line">var tr = &quot;&lt;tr&gt;&quot; + &quot;&lt;td&gt;&quot; + name + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + describle + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + time + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + del + &quot;&lt;/td&gt;&quot; + &quot;&lt;/tr&gt;&quot;;</span><br><span class="line">$(&quot;#tbody&quot;).append(tr);</span><br></pre></td></tr></table></figure>
-<p>解释：html能看到显示但在源码没有</p>
-<h3 id="列增加源码也增加"><a href="#列增加源码也增加" class="headerlink" title="列增加源码也增加"></a>列增加源码也增加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//添加方法</span><br><span class="line">$(&quot;#add&quot;).bind(&quot;click&quot;,function()&#123;</span><br><span class="line">    var del = &quot;&lt;a class=&apos;del&apos;&gt;删除&lt;/a&gt;&quot;;</span><br><span class="line">var tr = &quot;&lt;tr&gt;&quot; + &quot;&lt;td&gt;&quot; + name + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + describle + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + time + &quot;&lt;/td&gt;&quot; + &quot;&lt;td&gt;&quot; + del + &quot;&lt;/td&gt;&quot; + &quot;&lt;/tr&gt;&quot;;</span><br><span class="line">$(&quot;#tbody&quot;).append(tr);</span><br></pre></td></tr></table></figure>
-<p>解释：源码里有，页面也能看的到</p>
-<h3 id="动态删除"><a href="#动态删除" class="headerlink" title="动态删除"></a>动态删除</h3><ul>
-<li>此方法适用于用jq添加的元素删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#tbody&quot;).on(&quot;click&quot;, &quot;.del&quot;, function() &#123;</span><br><span class="line">    //获取此元素父容器</span><br><span class="line">    var aindex= $(this).parents(&quot;tr&quot;);</span><br><span class="line">    aindex.remove();</span><br><span class="line">    //直接删除此容器</span><br><span class="line">    //$(this).remove();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>解释：此方法可以删除jq添加的元素有的。</p>
-<h3 id="静态删除"><a href="#静态删除" class="headerlink" title="静态删除"></a>静态删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">$(&quot;tbody a&quot;).click(function()&#123;</span><br><span class="line">    var aindex= $(this).parents(&quot;tr&quot;);</span><br><span class="line">aindex.remove();	</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>解释：此方法只能删除原来html里有的元素，不能删除jq增加的元素。</p>
+<h2 id="VM讲解"><a href="#VM讲解" class="headerlink" title="VM讲解"></a>VM讲解</h2><h3 id="一，VM简介"><a href="#一，VM简介" class="headerlink" title="一，VM简介"></a>一，VM简介</h3><p>1，VM中默认安装了两个虚拟网卡：VMnet1和VMnet8.其中VMnet1主要是用于host网卡，VMnet8主要是NAT网卡。</p>
+<h3 id="二，，VM中网络适配器的三大模式"><a href="#二，，VM中网络适配器的三大模式" class="headerlink" title="二，，VM中网络适配器的三大模式"></a>二，，VM中网络适配器的三大模式</h3><p>三大模式：桥接模式，NAT模式，仅主机模式</p>
+<h4 id="2-1-桥接模式："><a href="#2-1-桥接模式：" class="headerlink" title="2.1 桥接模式："></a>2.1 桥接模式：</h4><p>自我理解：使用桥接模式，能够自动获取外网的ip,dns等一些网络信息，简单明了的说，它就相当于拥有网卡的完整的物理计算机。</p>
+<h4 id="2-2-NAT模式："><a href="#2-2-NAT模式：" class="headerlink" title="2.2 NAT模式："></a>2.2 NAT模式：</h4><p>自我理解：是最简单的虚拟机上网模式，只要主机能上网，虚拟机就能上网。虚拟机是通过VMnet8网络中的DHCP服务器进行获取ip地址等一系列网络配置。唯一差别就是不能够外网连接此虚拟机。</p>
+<h4 id="2-3-仅主机模式："><a href="#2-3-仅主机模式：" class="headerlink" title="2.3 仅主机模式："></a>2.3 仅主机模式：</h4><p>自我理解：虚拟机是和外部网络隔离的，不能够联外网的，虚拟机只能和虚拟机或者主机互访，（虚拟机的配置信息都是由VMnet1虚拟网络的DHCP服务器动态分配的。)</p>
+<p><font color="red" size="4px">补充：vmware14密钥：</font><b>CG54H-D8D0H-H8DHY-C6X7X-N2KG6</b></p>
 
       
 
@@ -265,11 +281,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jquery</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术支持</a>
         		</li>
       		
 		</ul>
@@ -325,7 +337,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/09/18/Jquery易忘知识/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/03/VM虚拟机的自我理解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -339,18 +351,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/09/19/AJAX学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          AJAX学习 
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/09/02/关于文件上传到github问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于文件上传到github问题 </div>
+    <a href="/2019/06/08/Windows-Server-配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Windows Server 配置 </div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -369,6 +372,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VM讲解"><span class="toc-number">1.</span> <span class="toc-text">VM讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一，VM简介"><span class="toc-number">1.1.</span> <span class="toc-text">一，VM简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二，，VM中网络适配器的三大模式"><span class="toc-number">1.2.</span> <span class="toc-text">二，，VM中网络适配器的三大模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-桥接模式："><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 桥接模式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-NAT模式："><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 NAT模式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-仅主机模式："><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 仅主机模式：</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -389,7 +405,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2018/09/18/Jquery易忘知识/",
+  id: "http://yoursite.com/2019/09/03/VM虚拟机的自我理解/",
   owner: 'xfbxfbxfb',
   repo: 'xfbxfbxfb.github.io',
   oauth: {
